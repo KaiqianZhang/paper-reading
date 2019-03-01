@@ -1,0 +1,19 @@
+---
+title: "Basenji: Sequential regulatory activity prediction across chromosomes with convolutional neural networks"
+author: "Kaiqian Zhang"
+date: "3/01/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+* author: David R. Kelley
+
+* tag: deep learning
+
