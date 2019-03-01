@@ -528,10 +528,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree6b6b047e27f28807d412decba08b09196e2cc4e4targetblank6b6b047a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/6b6b047e27f28807d412decba08b09196e2cc4e4" target="_blank">6b6b047</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree4cc922b4f078edf6be68d5dce268def81a635a0ctargetblank4cc922ba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/4cc922b4f078edf6be68d5dce268def81a635a0c" target="_blank">4cc922b</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree6b6b047e27f28807d412decba08b09196e2cc4e4targetblank6b6b047a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree4cc922b4f078edf6be68d5dce268def81a635a0ctargetblank4cc922ba" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -582,6 +582,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/4cc922b4f078edf6be68d5dce268def81a635a0c/analysis/basset.Rmd" target="_blank">4cc922b</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-03-01
+</td>
+<td>
+method for basset
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/1cb47e775e23efc8d45ea5a383275453cae8461a/docs/basset.html" target="_blank">1cb47e7</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-03-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/KaiqianZhang/paper-reading/blob/6b6b047e27f28807d412decba08b09196e2cc4e4/analysis/basset.Rmd" target="_blank">6b6b047</a>
 </td>
 <td>
@@ -605,6 +639,58 @@ create paper-reading repo first time
 <li><p>authors: David R. Kelley et al.</p></li>
 <li><p>tag: deep learning</p></li>
 </ul>
+<div id="data-description" class="section level2">
+<h2>Data description</h2>
+<ul>
+<li><p>format: DNase-seq peak BED (tab-delimited text file)</p></li>
+<li><p>125 + 39 = 164 cell types from two Consortiums</p></li>
+<li><p>consider all peaks, regardless of overlapping annotations</p></li>
+<li><p>merge peaks into one set:</p></li>
+<li><p>extend each peak from its midpoint to 600 bp</p></li>
+<li><p>merge adjacent peaks until no peaks overlapped by more than 200 bp</p></li>
+<li><p>activity(new merger peak) = union(each peak’s active cell types)</p></li>
+<li><p>get 2,071,886 peaks(/sites)</p></li>
+<li><p>inputs:</p></li>
+<li><p>hg19 reference genome sequence on those peaks</p></li>
+<li><p>binary vector indicate the presence of a significant peak in each of 164 cell types(???)</p></li>
+<li><p>divide sites into three categories: promoter + intragenic + intergenic</p></li>
+</ul>
+</div>
+<div id="deep-cnn" class="section level2">
+<h2>Deep CNN</h2>
+<ul>
+<li><p>each sequence as one hot code sequence</p></li>
+<li><p>three convolutional layers</p></li>
+<li><p>Relu function</p></li>
+<li><p>max-pooling</p></li>
+<li><p>two fully-connected neural network layers</p></li>
+<li><p>sigmoid function</p></li>
+<li><p>output: 164 outcomes indicating the predicted probability of accessibility in each cell type (164 outcomes for each site???)(input one site, output 164 outcomes since different cell types have different accessibility at one specific site)</p></li>
+<li><p>use stochastic gradient descent to learn parameters; use RMSprop to update on minibatches</p></li>
+<li><p>apply batch normalization after every layer to stabilize training optimization</p></li>
+</ul>
+</div>
+<div id="datasets" class="section level2">
+<h2>Datasets</h2>
+<p>training(1,930,000): perform optimization</p>
+<p>validation(70,000): “early stopping” after 12 epochs of unimproved validation loss and Bayesian optimization(???)</p>
+<p>testing(71,886): assessment and analysis</p>
+</div>
+<div id="motif-analysis" class="section level2">
+<h2>Motif analysis</h2>
+<p>I can understand that they convert the first convolutional layer filters to probabilistic PWMs. But I don’t understand the information ratio IC they computed on p.998. Why do they want to compute IC? What does this tell us? (???)</p>
+</div>
+<div id="compute-loss-and-gain-scores" class="section level2">
+<h2>Compute loss and gain scores</h2>
+<ul>
+<li><p>loss score = predicted activity(reference nucleotide) - min(predicted activity(alternative nucleotide))</p></li>
+<li><p>gain score = max(predicted activity(alternatice nucleotide)) - predicted activity(reference nucleotide)</p></li>
+</ul>
+<p>can investigate whether these scores have a significant statistical relationship with nucleotide conservation. What is nucleotide conservation(???)</p>
+</div>
+<div id="unclear" class="section level2">
+<h2>Unclear</h2>
+<p>They did not say how many samples are within each cell type.</p>
 <br> <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
@@ -633,6 +719,7 @@ loaded via a namespace (and not attached):
  [9] stringi_1.2.4   fs_1.2.6        whisker_0.3-2   rmarkdown_1.11 
 [13] tools_3.4.3     stringr_1.3.1   glue_1.3.0      xfun_0.4       
 [17] yaml_2.2.0      compiler_3.4.3  htmltools_0.3.6 knitr_1.21     </code></pre>
+</div>
 </div>
 
 
