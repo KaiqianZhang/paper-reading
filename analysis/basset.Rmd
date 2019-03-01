@@ -16,5 +16,81 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * tag: deep learning
 
+## Data description
+
+* format: DNase-seq peak BED (tab-delimited text file)
+
+* 125 + 39 = 164 cell types from two Consortiums
+
+* consider all peaks, regardless of overlapping annotations
+
+* merge peaks into one set:
+  
+  - extend each peak from its midpoint to 600 bp
+  
+  - merge adjacent peaks until no peaks overlapped by more than 200 bp
+  
+  - activity(new merger peak) = union(each peak's active cell types)
+  
+* get 2,071,886 peaks(/sites)
+
+* inputs: 
+
+  - hg19 reference genome sequence on those peaks
+  
+  - binary vector indicate the presence of a significant peak in each of 164 cell types(???)
+  
+* divide sites into three categories: promoter + intragenic + intergenic
+
+## Deep CNN
+
+* each sequence as one hot code sequence
+
+* three convolutional layers
+
+* Relu function
+
+* max-pooling
+
+* two fully-connected neural network layers
+
+* sigmoid function
+
+* output: 164 outcomes indicating the predicted probability of accessibility in each cell type (164 outcomes for each site???)(input one site, output 164 outcomes since different cell types have different accessibility at one specific site)
+
+* use stochastic gradient descent to learn parameters; use RMSprop to update on minibatches
+
+* apply batch normalization after every layer to stabilize training optimization
+
+## Datasets
+
+training(1,930,000): perform optimization
+
+validation(70,000): "early stopping" after 12 epochs of unimproved validation loss and Bayesian optimization(???)
+
+testing(71,886): assessment and analysis
+
+## Motif analysis
+
+I can understand that they convert the first convolutional layer filters to probabilistic PWMs. But I don't understand the information ratio IC they computed on p.998. Why do they want to compute IC? What does this tell us? (???)
+
+## Compute loss and gain scores
+
+* loss score = predicted activity(reference nucleotide) - min(predicted activity(alternative nucleotide))
+
+* gain score = max(predicted activity(alternatice nucleotide)) - predicted activity(reference nucleotide)
+
+can investigate whether these scores have a significant statistical relationship with nucleotide conservation. What is nucleotide conservation(???)
+
+## Unclear
+
+They did not say how many samples are within each cell type. 
+
+
+
+
+
+
+
 
 
