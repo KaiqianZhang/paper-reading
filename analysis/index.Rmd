@@ -11,3 +11,7 @@ Welcome to my research website.
 This is my website for notes on paper reading. 
 
 * Please click on [Basset: learning the regulartory code of the accessible genome with deep convolutional neural networks](basset.html) to see notes.
+
+* Please click on [Basenji: Sequential regulatory activity prediction across chromosomes with convolutional neural networks](basenji.html) to see notes.
+
+
