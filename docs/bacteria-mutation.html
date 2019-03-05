@@ -12,7 +12,7 @@
 <meta name="author" content="Kaiqian Zhang" />
 
 
-<title>Basenji: Sequential regulatory activity prediction across chromosomes with convolutional neural networks</title>
+<title>Mutations of bacteria from virus sensitivity to virus resistance</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -422,9 +422,9 @@ div.section {
 
 
 
-<h1 class="title toc-ignore">Basenji: Sequential regulatory activity prediction across chromosomes with convolutional neural networks</h1>
+<h1 class="title toc-ignore">Mutations of bacteria from virus sensitivity to virus resistance</h1>
 <h4 class="author"><em>Kaiqian Zhang</em></h4>
-<h4 class="date"><em>3/01/2019</em></h4>
+<h4 class="date"><em>3/3/2019</em></h4>
 
 </div>
 
@@ -582,7 +582,7 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/a904c1bd6fafb162bc29e0f6783ffd8414bb2126/analysis/basenji.Rmd" target="_blank">a904c1b</a>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/a904c1bd6fafb162bc29e0f6783ffd8414bb2126/analysis/bacteria-mutation.Rmd" target="_blank">a904c1b</a>
 </td>
 <td>
 kaiqian
@@ -594,40 +594,6 @@ kaiqian
 update bansenji
 </td>
 </tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/9c2f7c697aa637ca3c94245a7ceedfd3bdf22f17/docs/basenji.html" target="_blank">9c2f7c6</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/1413e1eee9bed2023c0c4b6a20af0ae01457df46/analysis/basenji.Rmd" target="_blank">1413e1e</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-01
-</td>
-<td>
-create basenji
-</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -635,53 +601,20 @@ create basenji
 </div>
 </div>
 </div>
+<div id="hypotheses" class="section level2">
+<h2>Hypotheses</h2>
 <ul>
-<li><p>author: David R. Kelley et al.</p></li>
-<li><p>tag: deep learning</p></li>
-</ul>
-<div id="difference-from-basset" class="section level2">
-<h2>Difference from Basset</h2>
-<ul>
-<li><p>Basset: model DNA accessibility (binary, open/close); Basenji: model distal regulatory interactions(quantitative, gene expression)</p></li>
-<li><p>Basset: peak data; Basenji: count data</p></li>
-</ul>
-</div>
-<div id="data-description" class="section level2">
-<h2>Data description</h2>
-<ul>
-<li><p>format: FASTQ file</p></li>
-<li><p>sources: 973 CAGE experiments, 593 DNase-seq and 1704 histone modification ChIP-seq, and 356 DNase-seq and 603 histone modification ChIP-seq</p></li>
+<li><p>Hypothesis 1: (mutation) There is finite probability for any bacterium to mutate during its life time from “sensitive” to “resistant”. i.e. The original variants were resistant before the virus was added. (“original variants” mean those bacteria which survive immediately after the virus has been added).</p></li>
+<li><p>Hypothesis 2: (acquired hereditary immunity) There is a small finite probability for any bacterium to survive an attack by the virus.</p></li>
+<li><p>Difference of two hypotheses:</p></li>
+<li><p>hypothesis 1: the culture contains “clones of resistant bacteria” of various sizes</p></li>
+<li><p>hypothesis 2: the bacteria which survive an attack by the virus will be a random sample of the culture</p></li>
 </ul>
 </div>
-<div id="data-preprocessing" class="section level2">
-<h2>Data preprocessing</h2>
+<div id="theory" class="section level2">
+<h2>Theory</h2>
 <ul>
-<li><p>get data as described above</p></li>
-<li><p>use Bowtie2 to align reads</p></li>
-<li><p>EM algorithm to estimate proportion, then get coverage estimates(what is coverage estimates here)</p></li>
-</ul>
-</div>
-<div id="input-and-output" class="section level2">
-<h2>Input and output</h2>
-<ul>
-<li><p>Input: 131 kb regions, discarded sequences with &gt;35% unmappable sequence, leaving 14,533 sequences</p></li>
-<li><p>Intermediate: a vector of 128 bp regions after maxpooling</p></li>
-<li><p>Ouput: read coverage of the sequence (??? what is read coverage)</p></li>
-</ul>
-</div>
-<div id="division-of-datasets" class="section level2">
-<h2>Division of datasets</h2>
-<ul>
-<li><p>training set: 90%</p></li>
-<li><p>validation set: 5%</p></li>
-<li><p>test set: 5%</p></li>
-</ul>
-</div>
-<div id="questions" class="section level2">
-<h2>Questions???</h2>
-<ul>
-<li><p>what is read coverage?</p></li>
-<li></li>
+<li>Goal: analysis of the probability distribution of the number of resistant bacteria to be expected on both hypotheses</li>
 </ul>
 <br> <br>
 <p>
