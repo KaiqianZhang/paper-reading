@@ -13,7 +13,52 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-* author: David R. Kelley
+* author: David R. Kelley et al.
 
 * tag: deep learning
+
+## Difference from Basset
+
+* Basset: model DNA accessibility (binary, open/close); Basenji: model distal regulatory interactions(quantitative, gene expression)
+
+* Basset: peak data; Basenji: count data
+
+## Data description
+
+* format: FASTQ file
+
+* sources: 973 CAGE experiments, 593 DNase-seq and 1704 histone modification ChIP-seq, and 356 DNase-seq and 603 histone modification ChIP-seq
+
+## Data preprocessing
+
+* get data as described above
+
+* use Bowtie2 to align reads
+
+* EM algorithm to estimate proportion, then get coverage estimates(what is coverage estimates here)
+
+## Input and output
+
+* Input: 131 kb regions, discarded sequences with >35% unmappable sequence, leaving 14,533 sequences
+
+* Intermediate: a vector of 128 bp regions after maxpooling
+
+* Ouput: read coverage of the sequence (??? what is read coverage)
+
+## Division of datasets
+
+* training set: 90%
+
+* validation set: 5%
+
+* test set: 5%
+
+
+
+## Questions???
+
+* what is read coverage? 
+
+* 
+
 

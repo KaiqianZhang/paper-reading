@@ -1,0 +1,47 @@
+---
+title: "Mutations of bacteria from virus sensitivity to virus resistance"
+author: "Kaiqian Zhang"
+date: "3/3/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hypotheses
+
+* Hypothesis 1: (mutation) There is finite probability for any bacterium to mutate during its life time from "sensitive" to "resistant". i.e. The original variants were resistant before the virus was added. ("original variants" mean those bacteria which survive immediately after the virus has been added).
+
+* Hypothesis 2: (acquired hereditary immunity) There is a small finite probability for any bacterium to survive an attack by the virus. 
+
+* Difference of two hypotheses:
+
+  - hypothesis 1: the culture contains "clones of resistant bacteria" of various sizes
+  
+  - hypothesis 2: the bacteria which survive an attack by the virus will be a random sample of the culture
+  
+## Theory
+
+* Goal: analysis of the probability distribution of the number of resistant bacteria to be expected on both hypotheses
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
