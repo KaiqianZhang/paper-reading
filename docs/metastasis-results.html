@@ -12,7 +12,7 @@
 <meta name="author" content="Kaiqian Zhang" />
 
 
-<title>Mutations of bacteria from virus sensitivity to virus resistance</title>
+<title>Metastasis results from preexisting variant cells within a malignant tumor</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -422,9 +422,9 @@ div.section {
 
 
 
-<h1 class="title toc-ignore">Mutations of bacteria from virus sensitivity to virus resistance</h1>
+<h1 class="title toc-ignore">Metastasis results from preexisting variant cells within a malignant tumor</h1>
 <h4 class="author"><em>Kaiqian Zhang</em></h4>
-<h4 class="date"><em>3/3/2019</em></h4>
+<h4 class="date"><em>3/18/2019</em></h4>
 
 </div>
 
@@ -589,7 +589,7 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/aff2fe3813ee6c85b0f01f0ba9f3af8d40285b62/analysis/bacteria-mutation.Rmd" target="_blank">aff2fe3</a>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/aff2fe3813ee6c85b0f01f0ba9f3af8d40285b62/analysis/metastasis-results.Rmd" target="_blank">aff2fe3</a>
 </td>
 <td>
 kaiqian
@@ -601,40 +601,6 @@ kaiqian
 reading for metastasis results
 </td>
 </tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/c85a190389fd6203f7200cb88b3f5e715094b77c/docs/bacteria-mutation.html" target="_blank">c85a190</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/a904c1bd6fafb162bc29e0f6783ffd8414bb2126/analysis/bacteria-mutation.Rmd" target="_blank">a904c1b</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-05
-</td>
-<td>
-update bansenji
-</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -642,64 +608,41 @@ update bansenji
 </div>
 </div>
 </div>
-<div id="hypotheses" class="section level2">
-<h2>Hypotheses</h2>
+<div id="goal" class="section level2">
+<h2>Goal</h2>
+<p>In this study, they investigate whether those unique metastasis cells preexistsed in the tumor cell population, or whether they arose during metastasis by a process of adaptation to local environmental conditions. (accompanied by luria’s bacteria-mutation paper)</p>
+</div>
+<div id="experiments" class="section level2">
+<h2>Experiments</h2>
 <ul>
-<li><p>Hypothesis 1: (mutation) There is finite probability for any bacterium to mutate during its life time from “sensitive” to “resistant”. i.e. The original variants were resistant before the virus was added. (“original variants” mean those bacteria which survive immediately after the virus has been added).</p></li>
-<li><p>Hypothesis 2: (acquired hereditary immunity) There is a small finite probability for any bacterium to survive an attack by the virus.</p></li>
-<li><p>Difference of two hypotheses:</p></li>
-<li><p>hypothesis 1: the culture contains “clones of resistant bacteria” of various sizes. expect an increase in the proportion of resistants.</p></li>
-<li><p>hypothesis 2: the bacteria which survive an attack by the virus will be a random sample of the culture. expect a constant proportion of resistants.</p></li>
+<li><p>Divide B16 melanoma parent line into two parts</p></li>
+<li><p>One portion: inject the parent line</p></li>
+<li><p>One portion: produce clones from the parent line and then inject the clones</p></li>
 </ul>
 </div>
-<div id="theory" class="section level2">
-<h2>Theory</h2>
+<div id="reasoning-do-not-understand" class="section level2">
+<h2>Reasoning (do not understand)</h2>
 <ul>
-<li>Goal: analysis of the probability distribution of the number of resistant bacteria to be expected on both hypotheses</li>
+<li>If the cloned sublines gave rise to widely different numbers of lung colonies, this suggests that the parent tumor was heterogeneous and that cells of both high and low matastatic potential preexisted in the parent popultion.</li>
 </ul>
-<div id="theory-for-mutation-hypothesis" class="section level3">
-<h3>Theory for mutation hypothesis</h3>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
 <ul>
-<li><p><span class="math inline">\(N_t\)</span>: the number of bacteria at time <span class="math inline">\(t\)</span>.</p></li>
-<li><p><span class="math inline">\(a\)</span>: mutation rate, the chance of mutation per bacterium per time unit.</p></li>
-<li><p><span class="math inline">\(m\)</span>: the number of mutations.</p></li>
+<li><p>From clones 21 and 24 (the distributions of the number of lung colonies produced by the groups of subclones do not differ statistically from their parent clones): the cloning procedure did not introduce the variation.</p></li>
+<li><p>The highly metastatic variant cells preexist within a primary tumor.</p></li>
 </ul>
-<p><span class="math display">\[
-dm = a * dt * N_t
-\]</span> <span class="math display">\[
-m = a(N_t-N_0)
-\]</span> Notice that the number of observed resistants is not the number of mutations. Increase in the number of resistants = new mutations + offsprings of previous mutations.</p>
+</div>
+<div id="my-questions" class="section level2">
+<h2>My questions:</h2>
 <ul>
-<li><span class="math inline">\(\rho\)</span>: the average number of resistant bacteria present at time <span class="math inline">\(t\)</span>.</li>
-</ul>
-<p><span class="math display">\[
-\frac{d\rho}{dt} = a*N_t+\rho
-\]</span></p>
-<p><span class="math display">\[
-\rho = t*a*N_t
-\]</span> if assuming that at time <span class="math inline">\(t=0\)</span> the culture contained no resistant bacteria.</p>
-<p>Given limited number of experiments, the average number of resistants would be smaller than the theoretical value. Instead, start time from <span class="math inline">\(t_0\)</span>, prior to which mutations were not likely occur in the experiments.</p>
-<ul>
-<li><span class="math inline">\(r\)</span>: the average number of observed resistants (i.e in limited experiments).</li>
-</ul>
-<p><span class="math display">\[
-r = (t-t_0)*a*N_t
-\]</span></p>
-<ul>
-<li><span class="math inline">\(t_0\)</span>: up to the time just one mutation occurred in a group of <span class="math inline">\(C\)</span> similar cultures.</li>
-</ul>
-<p><span class="math display">\[
-1 = a*C*(N_{t_0}-N_0)
-\]</span></p>
-<p><span class="math display">\[
-r = a*N_t*ln(N_t*C*a)
-\]</span> Now we probably could estimate mutation rate <span class="math inline">\(a\)</span>. But still could not verify mutation hypothesis.</p>
-<br> <br>
+<li>In the abstract, how could they get the sentence (2) conclusion from sentence (1)? <br> <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
 </button>
-</p>
+</p></li>
+</ul>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()</code></pre>
 <pre><code>R version 3.4.3 (2017-11-30)
@@ -722,7 +665,6 @@ loaded via a namespace (and not attached):
  [9] stringi_1.2.4   fs_1.2.6        whisker_0.3-2   rmarkdown_1.11 
 [13] tools_3.4.3     stringr_1.3.1   glue_1.3.0      xfun_0.4       
 [17] yaml_2.2.0      compiler_3.4.3  htmltools_0.3.6 knitr_1.21     </code></pre>
-</div>
 </div>
 </div>
 
