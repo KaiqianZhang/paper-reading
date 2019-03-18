@@ -22,14 +22,59 @@ knitr::opts_chunk$set(echo = TRUE)
 
 * Difference of two hypotheses:
 
-  - hypothesis 1: the culture contains "clones of resistant bacteria" of various sizes
+  - hypothesis 1: the culture contains "clones of resistant bacteria" of various sizes. expect an increase in the proportion of resistants.
   
-  - hypothesis 2: the bacteria which survive an attack by the virus will be a random sample of the culture
+  - hypothesis 2: the bacteria which survive an attack by the virus will be a random sample of the culture. expect a constant proportion of resistants.
   
 ## Theory
 
 * Goal: analysis of the probability distribution of the number of resistant bacteria to be expected on both hypotheses
 
+### Theory for mutation hypothesis
+
+* $N_t$: the number of bacteria at time $t$.
+
+* $a$: mutation rate, the chance of mutation per bacterium per time unit.
+
+* $m$: the number of mutations.
+
+$$
+dm = a * dt * N_t
+$$
+$$
+m = a(N_t-N_0)
+$$
+Notice that the number of observed resistants is not the number of mutations. Increase in the number of resistants = new mutations + offsprings of previous mutations.
+
+* $\rho$: the average number of resistant bacteria present at time $t$. 
+
+$$
+\frac{d\rho}{dt} = a*N_t+\rho
+$$
+
+$$
+\rho = t*a*N_t
+$$
+if assuming that at time $t=0$ the culture contained no resistant bacteria.
+
+Given limited number of experiments, the average number of resistants would be smaller than the theoretical value. Instead, start time from $t_0$, prior to which mutations were not likely occur in the experiments. 
+
+* $r$: the average number of observed resistants (i.e in limited experiments).
+
+$$
+r = (t-t_0)*a*N_t
+$$
+
+* $t_0$: up to the time just one mutation occurred in a group of $C$ similar cultures.
+
+$$
+1 = a*C*(N_{t_0}-N_0)
+$$
+
+$$
+r = a*N_t*ln(N_t*C*a)
+$$
+Now we probably could estimate mutation rate $a$. But still could not verify mutation hypothesis.
 
 
 

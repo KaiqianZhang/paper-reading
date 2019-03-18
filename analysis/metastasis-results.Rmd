@@ -1,0 +1,41 @@
+---
+title: "Metastasis results from preexisting variant cells within a malignant tumor"
+author: "Kaiqian Zhang"
+date: "3/18/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Goal
+
+In this study, they investigate whether those unique metastasis cells preexistsed in the tumor cell population, or whether they arose during metastasis by a process of adaptation to local environmental conditions. (accompanied by luria's bacteria-mutation paper)
+
+## Experiments
+
+* Divide B16 melanoma parent line into two parts
+
+* One portion: inject the parent line
+
+* One portion: produce clones from the parent line and then inject the clones
+
+## Reasoning (do not understand)
+
+* If the cloned sublines gave rise to widely different numbers of lung colonies, this suggests that the parent tumor was heterogeneous and that cells of both high and low matastatic potential preexisted in the parent popultion.
+
+## Conclusion
+
+* From clones 21 and 24 (the distributions of the number of lung colonies produced by the groups of subclones do not differ statistically from their parent clones): the cloning procedure did not introduce the variation.
+
+* The highly metastatic variant cells preexist within a primary tumor.
+
+## My questions:
+
+* In the abstract, how could they get the sentence (2) conclusion from sentence (1)?
