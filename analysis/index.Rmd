@@ -17,3 +17,5 @@ This is my website for notes on paper reading.
 * Please click on [Mutations of bacteria from virus sensitivity to virus resistance](bacteria-mutation.html) to see notes.
 
 * Please click on [Metastasis results from preexisting variant cells within a malignant tumor](metastasis-results.html) to see notes.
+
+* Please click on [Enzyme induction as an all-or-none phenomenon](induction.html) to see notes.

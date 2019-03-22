@@ -1,0 +1,60 @@
+---
+title: "Enzyme induction as an all-or-none phenomenon"
+author: "Kaiqian Zhang"
+date: "3/20/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Components
+
+* enzyme: $\beta$-galactosidase
+
+* inducer: lactose or TMG(mainly talked about TMG); TMG is not split by this enzyme while lactose does.
+
+* gratuitous condition: using lactose results in an increase in enzyme and also increase the growth rate. But using TMG together with succinate would result in an increase in enzyme but has no effect on growth rate.
+
+* mainly study using TMG (i.e induction under gratuitous conditions)
+
+## Findings
+
+* Under gratuitous conditions, high concentrations of inducer produce a uniform distribution of enzyme among individual bacteria very early.
+
+* Two factors in affecting the rate of induction: (1) the concentration of inducer inside bacterium
+(2) the inducer is actively transported into bacterium so that the inducer concentration inside the bacterium is higher than in medium.
+
+* At the low inducer concentrations, the population consists essentially of individual bacteria that are either making enzyme at full rate or not making it at all.
+
+* Intermediate saturation: at low inducer concentrations the rise leveled off when only a fraction of the population had been induced. 
+
+* FACT: induced bacteria grow more slowly than uninduced. And induced bacteria grow more slowly the higher the concentration of inducer.
+
+* FACT: at low inducer concentrations, a fully induced culture (bacteria are all fully induced) can be maintained fully induced indefinitely, but a culture that is not fully induced (a mixture of induced and uninduced bacteria), cannot be maintained at its initial level.
+
+* The rate of induction at low inducer concentrations is very much dependent on the CO2 concentration.
+
+* At a high TMG concentration, the concentration of enzyme should rise linearly to begin with, and then more slowly as it asymptotically approaches $S_{max}$. [Fig 1]
+
+* At certain low concentrations (maintenance concentrations), the high rate of synthesis of a preinduced culture can be maintained indefinitely at a lower concentration of inducer.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
