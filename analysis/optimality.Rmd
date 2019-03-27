@@ -1,0 +1,23 @@
+---
+title: "Optimality and evolutionary tuning of the expression level of a protein"
+author: "Kaiqian Zhang"
+date: "3/27/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Goal
+
+This study aimed to examine whether protein expression levels evolve towards optimal solutions of a cost-benefit problem.
+
+## Details
+
+- experiment condition: constnat lactose environment
+
