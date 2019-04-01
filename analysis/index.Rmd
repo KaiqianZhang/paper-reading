@@ -22,4 +22,6 @@ This is my website for notes on paper reading.
 
 * Please click on [Optimality and evolutionary tuning of the expression level of a protein](optimality.html) to see notes.
 
+* Please click on [Stochastic gene expression in a single cell](stochastic.html) to see notes.
+
 

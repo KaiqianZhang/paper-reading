@@ -1,0 +1,27 @@
+---
+title: "Stochastic gene expression in a single cell"
+author: "Kaiqian Zhang"
+date: "4/1/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Goal
+
+
+## Findings
+
+
+## Experiments
+
+
+## Quant
+

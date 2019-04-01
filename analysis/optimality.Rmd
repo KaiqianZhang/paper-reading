@@ -21,3 +21,46 @@ This study aimed to examine whether protein expression levels evolve towards opt
 
 - experiment condition: constnat lactose environment
 
+### Experiment 1
+
+- measure cost and benefit of Lac protein expression in wild-type E. coli.
+
+#### Cost
+
+- define cost: reduction in growth rate due to cell production and presence of Lac protein burden
+
+- measure cost: no lactose; at various concentration of inducer IPTG; 
+
+- finding: the cost per protein increases as more Lac protein is produced.
+
+#### Benefit
+
+- define benefit: gained by the action of the Lac proteins that transport and use lactose
+
+- measure benefit: at various concentration of lactose; full induction with saturating IPTG (to keep cost constant)
+
+### Experiment 2
+
+- Over generations, would E. coli actually evolve to these optimal expression levels under a constant lactose environment?
+
+#### findings
+
+- changes in LacZ activity were proportional to changes in LacZ protein level.
+
+
+
+
+
+
+
+
+
+
+
+
+## Resource
+
+Youtube video for operon: https://www.youtube.com/watch?v=10YWgqmAEsQ
+
+
+
