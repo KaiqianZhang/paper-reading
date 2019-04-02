@@ -534,10 +534,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreecb4453304bb8a9d06c118da387808f5f5b9633catargetblankcb44533a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/cb4453304bb8a9d06c118da387808f5f5b9633ca" target="_blank">cb44533</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree06fd93977f7c993d4e76477e1a10a12698c372f4targetblank06fd939a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/06fd93977f7c993d4e76477e1a10a12698c372f4" target="_blank">06fd939</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreecb4453304bb8a9d06c118da387808f5f5b9633catargetblankcb44533a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree06fd93977f7c993d4e76477e1a10a12698c372f4targetblank06fd939a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -593,6 +593,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/06fd93977f7c993d4e76477e1a10a12698c372f4/analysis/DeepVariant.Rmd" target="_blank">06fd939</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-04-02
+</td>
+<td>
+indentation for deep variant
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/a2f9a8770bc93d9b94c4f9a601fae1276f9a4c58/docs/DeepVariant.html" target="_blank">a2f9a87</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-04-02
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/KaiqianZhang/paper-reading/blob/cb4453304bb8a9d06c118da387808f5f5b9633ca/analysis/DeepVariant.Rmd" target="_blank">cb44533</a>
 </td>
 <td>
@@ -628,16 +662,18 @@ update notes on deep variant
 <h2>Step 3 Deep learning</h2>
 <ul>
 <li><p>for each candidate variant, encode the reference and read into an RGB image</p></li>
-<li><p>Input See code snippet for supplementary note 9: <a href="https://media.nature.com/original/nature-assets/nbt/journal/v36/n10/extref/nbt.4235-S1.pdf" class="uri">https://media.nature.com/original/nature-assets/nbt/journal/v36/n10/extref/nbt.4235-S1.pdf</a></p></li>
+<li><p>Input:</p></li>
+</ul>
+<p>See code snippet for supplementary note 9: <a href="https://media.nature.com/original/nature-assets/nbt/journal/v36/n10/extref/nbt.4235-S1.pdf" class="uri">https://media.nature.com/original/nature-assets/nbt/journal/v36/n10/extref/nbt.4235-S1.pdf</a></p>
+<ul>
 <li><p>use candidate variant as a middle point, width extending to both sides is 221, and height is 100</p></li>
 <li><p>reference part: 5 * 221 image (the red component is changing)</p></li>
 <li><p>read part: for each read, create one additional row in the image</p></li>
 <li><p>classification problem: three-state genotype classification (hom-ref, het, hom-alt) (Q)</p></li>
 <li><p>CNN: <a href="https://github.com/google/deepvariant/blob/r0.7/deepvariant/modeling.py" class="uri">https://github.com/google/deepvariant/blob/r0.7/deepvariant/modeling.py</a></p></li>
 <li><p>based on tensorflow-slim image classification model</p></li>
-<li><p>Output: genotype likelihood</p></li>
+<li><p>Output: genotype likelihood: For each candidate variant site, a three-state probability distribution is returned.</p></li>
 </ul>
-<p>For each candidate variant site, a three-state probability distribution is returned.</p>
 <br> <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
