@@ -1,0 +1,53 @@
+---
+title: "A universal SNP and small-indel variant caller using deep neural networks"
+author: "Kaiqian Zhang"
+date: "3/8/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Step 1
+
+- realign each read (Q) [given short sequences, realign reads means map those short reads onto the reference genome?]
+
+## Step 2
+
+- find candidate variants (Q) [locus?]
+
+## Step 3 Deep learning
+
+- for each candidate variant, encode the reference and read into an RGB image
+
+- Input
+See code snippet for supplementary note 9: https://media.nature.com/original/nature-assets/nbt/journal/v36/n10/extref/nbt.4235-S1.pdf
+
+  * use candidate variant as a middle point, width extending to both sides is 221, and height is 100 
+  
+  * reference part: 5 * 221 image (the red component is changing)
+  
+  * read part: for each read, create one additional row in the image
+  
+- classification problem: three-state genotype classification (hom-ref, het, hom-alt) (Q)
+
+- CNN: https://github.com/google/deepvariant/blob/r0.7/deepvariant/modeling.py
+
+  * based on tensorflow-slim image classification model
+  
+- Output: genotype likelihood
+
+For each candidate variant site, a three-state probability distribution is returned. 
+
+
+
+
+
+
+
+
