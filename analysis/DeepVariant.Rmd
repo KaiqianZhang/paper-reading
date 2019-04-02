@@ -25,24 +25,23 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - for each candidate variant, encode the reference and read into an RGB image
 
-- Input
+- Input:
+
 See code snippet for supplementary note 9: https://media.nature.com/original/nature-assets/nbt/journal/v36/n10/extref/nbt.4235-S1.pdf
 
-  * use candidate variant as a middle point, width extending to both sides is 221, and height is 100 
+  + use candidate variant as a middle point, width extending to both sides is 221, and height is 100 
   
-  * reference part: 5 * 221 image (the red component is changing)
+  + reference part: 5 * 221 image (the red component is changing)
   
-  * read part: for each read, create one additional row in the image
+  + read part: for each read, create one additional row in the image
   
 - classification problem: three-state genotype classification (hom-ref, het, hom-alt) (Q)
 
 - CNN: https://github.com/google/deepvariant/blob/r0.7/deepvariant/modeling.py
 
-  * based on tensorflow-slim image classification model
+  + based on tensorflow-slim image classification model
   
-- Output: genotype likelihood
-
-For each candidate variant site, a three-state probability distribution is returned. 
+- Output: genotype likelihood: For each candidate variant site, a three-state probability distribution is returned. 
 
 
 
