@@ -16,12 +16,52 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Goal
 
+Since the amount of protein produced by a particular gene varies from cell to cell, there exists stochastic gene expression in a single cell. 
+
+- extrinsic noise: concentrations, states, locations of molecules, fluctuations.
+
+- intrinsic noise: random microscopic events that govern which reactions occur and in what order. From biochemical process of gene expression.
+
 
 ## Findings
+
+- No matter how accurately the levels of regulatory proteins are controlled, intrinsic noise fundamentally limits the precision of gene regulation.
+
+- least noisy gene expression condition: strong constitutive promoters driving the expression of stable proteins
+
+- In the lac- and other stronger promoter environment, we obtained same results (low noise state). This indicates that gene expression can be uniform under some conditions, and the low noise state does not strictly depend on a particular promoter sequence.
+
+- Experiments in environment 1, 2, and 3 indicate that as the activity of lacI increases -> reduction of transcription rate -> increase noise.
+
+- Extrinsic noise reaches the maximum at intermediate rates of transcription.
+
+- Extrinsic noise is smaller in cells carrying a chromosomal copy of lacI than it is in cells carrying a plasmid-borne copy of the gene.
+
+- delete RecA in the gene -> increase noise, increased noise may arise from transient copy-number differences between different parts of chromosome. 
+
 
 
 ## Experiments
 
+- define intrinsic noise: the extent to which the activities of two identical copies of that gene, in the same intracellular environment, fail to correlate. 
 
-## Quant
+- use strains of E. coli. colored by cyan and green
+
+- two reporter genes were controlled by the same promoters
+
+- measure: mean fluorescent intensities. See Fig 3. to know how to obtain intrinsic and extrinsic noise from fluorescent intensities. [Q: why are intrinsic and extrinsic noise in those directions?]
+
+- environment 1: lac- (i.e. lacI, the lac repressor gene, is deleted) -> low intrinsic noise and low total noise
+
+- environment 2: lac+ (i.e. wild-type) -> increase noise
+
+- environment 3: lac+ and IPTG, which inactives the lac repressor -> low noise same as environment 1
+
+- use Repressilator, which causes periodic synthesis of lacI, to find that regulatory dynamics can cause substantial changes in noise levels.
+
+- delete recA in the gene -> increase noise 
+
+## Supplementary
+
+not fully understand...
 
