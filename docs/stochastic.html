@@ -455,7 +455,7 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2019-04-01
+<strong>Last updated:</strong> 2019-04-03
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -534,10 +534,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreeff23eec029737feaeb05fcba955dd626f052272etargetblankff23eeca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/ff23eec029737feaeb05fcba955dd626f052272e" target="_blank">ff23eec</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreece3b8bd3216026e5b09cd127905db9f01aa082b5targetblankce3b8bda"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/ce3b8bd3216026e5b09cd127905db9f01aa082b5" target="_blank">ce3b8bd</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreeff23eec029737feaeb05fcba955dd626f052272etargetblankff23eeca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreece3b8bd3216026e5b09cd127905db9f01aa082b5targetblankce3b8bda" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -547,9 +547,6 @@ Ignored files:
     Ignored:    .DS_Store
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
-
-Untracked files:
-    Untracked:  analysis/DeepVariant.Rmd
 
 Unstaged changes:
     Modified:   analysis/basset.Rmd
@@ -596,6 +593,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/ce3b8bd3216026e5b09cd127905db9f01aa082b5/analysis/stochastic.Rmd" target="_blank">ce3b8bd</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-04-03
+</td>
+<td>
+finish paper 5
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/2c4d6b728dcb5ed695733b8bb1a0a27af518e182/docs/stochastic.html" target="_blank">2c4d6b7</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-04-01
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/KaiqianZhang/paper-reading/blob/ff23eec029737feaeb05fcba955dd626f052272e/analysis/stochastic.Rmd" target="_blank">ff23eec</a>
 </td>
 <td>
@@ -617,15 +648,41 @@ start paper 5 stocahstic gene expression reading
 </div>
 <div id="goal" class="section level2">
 <h2>Goal</h2>
+<p>Since the amount of protein produced by a particular gene varies from cell to cell, there exists stochastic gene expression in a single cell.</p>
+<ul>
+<li><p>extrinsic noise: concentrations, states, locations of molecules, fluctuations.</p></li>
+<li><p>intrinsic noise: random microscopic events that govern which reactions occur and in what order. From biochemical process of gene expression.</p></li>
+</ul>
 </div>
 <div id="findings" class="section level2">
 <h2>Findings</h2>
+<ul>
+<li><p>No matter how accurately the levels of regulatory proteins are controlled, intrinsic noise fundamentally limits the precision of gene regulation.</p></li>
+<li><p>least noisy gene expression condition: strong constitutive promoters driving the expression of stable proteins</p></li>
+<li><p>In the lac- and other stronger promoter environment, we obtained same results (low noise state). This indicates that gene expression can be uniform under some conditions, and the low noise state does not strictly depend on a particular promoter sequence.</p></li>
+<li><p>Experiments in environment 1, 2, and 3 indicate that as the activity of lacI increases -&gt; reduction of transcription rate -&gt; increase noise.</p></li>
+<li><p>Extrinsic noise reaches the maximum at intermediate rates of transcription.</p></li>
+<li><p>Extrinsic noise is smaller in cells carrying a chromosomal copy of lacI than it is in cells carrying a plasmid-borne copy of the gene.</p></li>
+<li><p>delete RecA in the gene -&gt; increase noise, increased noise may arise from transient copy-number differences between different parts of chromosome.</p></li>
+</ul>
 </div>
 <div id="experiments" class="section level2">
 <h2>Experiments</h2>
+<ul>
+<li><p>define intrinsic noise: the extent to which the activities of two identical copies of that gene, in the same intracellular environment, fail to correlate.</p></li>
+<li><p>use strains of E. coli. colored by cyan and green</p></li>
+<li><p>two reporter genes were controlled by the same promoters</p></li>
+<li><p>measure: mean fluorescent intensities. See Fig 3. to know how to obtain intrinsic and extrinsic noise from fluorescent intensities. [Q: why are intrinsic and extrinsic noise in those directions?]</p></li>
+<li><p>environment 1: lac- (i.e. lacI, the lac repressor gene, is deleted) -&gt; low intrinsic noise and low total noise</p></li>
+<li><p>environment 2: lac+ (i.e. wild-type) -&gt; increase noise</p></li>
+<li><p>environment 3: lac+ and IPTG, which inactives the lac repressor -&gt; low noise same as environment 1</p></li>
+<li><p>use Repressilator, which causes periodic synthesis of lacI, to find that regulatory dynamics can cause substantial changes in noise levels.</p></li>
+<li><p>delete recA in the gene -&gt; increase noise</p></li>
+</ul>
 </div>
-<div id="quant" class="section level2">
-<h2>Quant</h2>
+<div id="supplementary" class="section level2">
+<h2>Supplementary</h2>
+<p>not fully understand…</p>
 <br> <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
