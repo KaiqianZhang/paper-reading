@@ -26,4 +26,7 @@ This is my website for notes on paper reading.
 
 * Please click on [Stochastic gene expression in a single cell](stochastic.html) to see notes.
 
+* Please click on [Noise in gene expression determines cell fate in Bacillus subtilis](noise-fate.html) to see notes.
+
+
 

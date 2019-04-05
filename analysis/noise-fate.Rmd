@@ -1,0 +1,111 @@
+---
+title: "Noise in gene expression determines cell fate in Bacillus subtilis"
+author: "Kaiqian Zhang"
+date: "4/5/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Definition
+
+- noise: stochastic fluctuations in gene expression.
+
+- Bacillus subtilis (strain): soil bacterium, which can perform DNA uptake (i.e. incorporate new genetic material) when it is in the "competent" state.
+
+- ComK (gene): 1. regulation of genetic competence and DNA uptake; 2. is subjected to the positive autoregulatory loop; 3. represses the transcrption of rok.
+
+- T0: the onset of stationary phase.
+
+- T2: two hours after T0, transitions to compentence cease to occur and 15% of the cells remain competent.
+
+
+
+
+
+
+## Goal 
+
+The paper wants to show that:
+
+- reduce noise in comK expression -> decrease the number of competent cells
+
+- understand cells only transition to the competent state for around 2 hours during stationary phase
+
+
+
+## Experiments and Findings
+
+Experiments 1, 2, and 3 altogether explains why cells are only able to transition to competence for a limited amount of time.
+
+### Experiments 1 : See Fig 2D
+
+- question: study the dynamics of comK expression in noncompetent cells
+
+- observe: See Fig 2D for the wild-type strain and rok strain.
+
+- conclude 1: in the early stationary phase, at this time the average mRNA level is elevated, so the probability of transition is high because of the increased likilihood of randomly generating enough comK to activate the positive feedback loop. On the other hand, later in the stationary phase, when the average is low, the probability of such an accumulation is much smaller. [Fig 2D]
+
+### Experiment 2: See Fig 2E
+
+- observe: See Fig 2E
+
+- conlcude 2: increase transition rate to competnece at T0 is due to the increased basal rate of comK transciption, rather than the increased transcription rate of positive feedback at the comK promoter.
+
+### Experiment 3
+
+- question: to verify decrease in comK transcription rate during stationary phase -> decrease in transition to competence.
+
+- conclude 3: a relatively small decrease in comK transcription can effectively end transitions to the competent state.
+
+
+### Experiment 4
+
+- question: whether extrinsic or intrinsic noise affects fluctuations in competence
+
+- extrinsic noise: correlated variations between mRNA numbers for comK mRNA and comK-M2 mRNA
+
+- intrinsic noise: uncorrelated variations
+
+- observe: in the early stationary phase, when most of the transitions occur, largely uncorrelated.
+
+- conclude 4: intrinsic noise may lead to the initiation of competence.
+
+### Experiment 5
+
+- question: to verify intrinsic noise -> transitions to competent state.
+
+- fact from other studies: increase in transcription rate -> decrease intrinsic noise, and translation rate is not related to intrinsic noise.
+
+- use rok strain, which has twofold increase in transcription rate over WT strain. change ATG initiation codon of comK to GTG to reudce translational efficiency. 
+
+- observe: Fig 4: the number of competent cells at T2 was dramatically lower in low-noise strain than in the WT strain.
+
+- conclude 5: intrinsic noise leads to competence transitions, lower intrinsic noise -> fewer competence transitions.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
