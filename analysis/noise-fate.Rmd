@@ -42,7 +42,7 @@ The paper wants to show that:
 
 ## Experiments and Findings
 
-Experiments 1, 2, and 3 altogether explains why cells are only able to transition to competence for a limited amount of time.
+Experiments 1, 2, and 3 altogether explain why cells are only able to transition to competence for a limited amount of time.
 
 ### Experiments 1 : See Fig 2D
 
