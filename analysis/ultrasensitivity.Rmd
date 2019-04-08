@@ -1,0 +1,68 @@
+---
+title: "An amplified sensitivity arising from covalent modification in biological systems"
+author: "Kaiqian Zhang"
+date: "4/8/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overall
+
+- study subject: covalent modification scheme
+
+- read discussion part first
+
+- understanding level: 3/5
+
+## Experiments ingredients
+
+- W, W*: two forms of protein
+
+- E1, E2: two converter enzymes
+
+- effector: change in V1/V2 ratio
+
+- R_v: the steepness of the transition low R_v -> very sensitive; definition:
+
+$$
+\frac{V_1/V_2\text{ when 90% of the protein is in the modified form}}{V_1/V_2\text{ when 10% of the protein is in the modified form}}
+$$
+
+## Findings
+
+- There is an added sensitivity inherent in covalent modification schemes when one or more of the converter enzymes operate in the "zero-order" region.
+
+- From Fig1, conclusion: the W-to-W* transition occurs far more abruptly when the converting enzyme E1 and E2 are saturated (i.e. K1 and K2 have low values) than when they operate in the first-order region.
+
+- Frome Fig4, conclusion: additional cycles in a cascade provide the potentiality for increasing the sensitivity of an individual cycle. 
+
+- From Eqn 14, conclusion: the zero-order ultrasensitivity cannot occur when the converter enzymes operate entirely in the domain of first-order kinetics. 
+
+- The change from the initial steady state to the final state is quite rapid and relatively independent of the steepness of the transition.
+
+- If the change in V1/V2 is not large enough to exceed the threshold of stimulation, the resulting W* curve never shows a dramatic increase.
+
+- main conclusion: Three potential devices for enhancing sensitivity beyond the expected from Michaelis-Menten kinetics: 
+
+(i) the conventional "cooperative ultrasensitivity", which could occur for any enzyme with a Hill coefficient greater than 1;
+
+(ii) the ooportunity for a given ligand to act in more than one step, "sultistep ultrasensitivity";
+
+(iii) "zero-order ultrasensitivity", in which converter enzymes operating under saturating conditions amplify the response to a signal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -28,5 +28,20 @@ This is my website for notes on paper reading.
 
 * Please click on [Noise in gene expression determines cell fate in Bacillus subtilis](noise-fate.html) to see notes.
 
+* Please click on [An amplified sensitivity arising from covalent modification in biological systems](ultrasensitivity.html) to see notes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
