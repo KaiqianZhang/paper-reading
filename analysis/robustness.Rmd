@@ -1,0 +1,56 @@
+---
+title: "Robustness in simple biochemical networks"
+author: "Kaiqian Zhang"
+date: "4/11/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Research question
+
+- whether cell network is sensitive or robust to variations in their biochemical parameters.
+
+## Mechanism
+
+- a biochemical network responsible for bacterial chemotaxis
+
+- input: ligand concentration
+
+- output: tumbling frequency
+
+- a two-state model
+
+- input: ligand concentration `l`
+
+- output: average complex activity `A`
+
+## Conclusion
+
+- cell network is robust. 
+
+## Findings
+
+- Fig 2: When a typical model system is subject to a step-like change in attractant concentration, it is able to respond and to adapt to the imposed change. The adaptation is nearly perfect for all ligand concetrations.
+
+- Fig 3b: Robustness is thus a characteristic of specific network properties and not of the network as a whole: whereas some properties are robust, others can show sensitivity to changes in the network parameters, e.g. adaptation time, steady-state tumbling frequency.
+
+- These non-robust properties of the network show a strong correlation in their variation.
+
+- Adaptation property is observed in a large variety of populations.
+
+- Adaptation property is preserved even if two genetically identical bateria have various non-robust properties in the network (such as adaptation time, steady-state tumbling frequency). 
+
+## Activity dependent kinetics
+
+- idea: Activity = active modified enzyme + active unmodified enzyme. Imagine a feed-back system, in which the output A determines the rates of modification reactions, which in turn determine the slow changes in A. 
+- with activity-dependent kinetics, the adaptation properties is insensitive to the values of system parameters (such as enzyme concentrations). 
+
+- but the steady-state activity depends on the enzyme concentration
+
+
+
+
+
