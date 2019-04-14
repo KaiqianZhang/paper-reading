@@ -32,6 +32,8 @@ This is my website for notes on paper reading.
 
 * Please click on [Robustness in simple biochemical networks](robustness.html) to see notes.
 
+* Please click on [Robustness in bacterial chemotaxis](robustness2.html) to see notes.
+
 
 
 

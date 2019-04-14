@@ -1,0 +1,19 @@
+---
+title: "Robustness in bacterial chemotaxis"
+author: "Kaiqian Zhang"
+date: "4/14/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- key concept: [definition for `exact adaptation`]: a change in the concentration of a chemical stimulant induces a rapid change in the bacteria's tumbling frequency, which gradually adapts back precisely to its pre-stimulus value.
+
+- study object: protein network for chemotaxis
+
+- finding 1: some properties, such as steady-state behavior (e.g. tumbling frequency) and adaptation time, show strong variations in response to varying protein concentrations. In contrast, the precision of adaptation (a.k.a exact adaptation) is robust and does not vary with the protein concentrations.
+
+- finding 2: exact adaptation is critical for chemotaxis, whereas chemotaxis ability is not dependent on the precise value of the steady-state tumbling frequency and the adaptation time. 
+
