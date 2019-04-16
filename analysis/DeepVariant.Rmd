@@ -43,6 +43,62 @@ See code snippet for supplementary note 9: https://media.nature.com/original/nat
   
 - Output: genotype likelihood: For each candidate variant site, a three-state probability distribution is returned. 
 
+## Further Notes on DeepVariant
+
+DeepVariant pipeline consists of 3 steps: `make_examples`, `call_variants`, and `postprocess_variants`. They have trained several models already. By specifying `--model_type=WGS`, you'll be using a model that is best suited for Illumina Whole Genome Sequencing data. 
+
+- Creating examples. Variants candidates are extracted from input BAM file (previously aligned).
+
+- Calling Variants. Applying DeepVariant Convolutional Neural Network (CNN) model to infer variants.
+
+- Exporting results to VCF.
+
+### Data
+
+Input data is FASTQ file. They ran it through `PrecisionFDA's BWA-MEM app` with default setting, and then got the HG002_NIST_150bp_50x.bam file as output. It also has a truth vcf file for results comparison. 
+
+Output file is a vcf file. They use [hap.py]((https://github.com/Illumina/hap.py), which is a program that benchmarks variant calls against gold standard truth datasets, to evaluate the variant call quality. 
+
+### Input [details](https://github.com/google/deepvariant/blob/r0.8/docs/deepvariant-details.md)
+
+Given a bam file, they move away from RGB-encoded (3-channel) pileup images and instead represent the aligned read data using a multi-channel tensor data layout. Currently they represent the data as a 6-channel raw tensor in which they encode:
+
+- The read base (A, C, G, T)
+
+- The base's quality score
+
+- The read's mapping quality score
+
+- The read's strand (positive or negative) [what is strand???]
+
+- Does the read support the allele being evaluated?
+
+- Does the base match the reference genome at this position?
+
+Further, a visualization for one multi-channel tensor is shown [here](https://github.com/google/deepvariant/blob/r0.8/docs/visualizing_examples.ipynb).
+
+### Output [details](https://github.com/google/deepvariant/blob/r0.8/docs/deepvariant-details.md)
+
+- VCF file: 
+
+DeepVariant generates both VCF output containing only variant calls as well as an additional gVCF output file that contains both variants and non-variant sites. Examples can be seen [here](https://github.com/google/deepvariant/blob/r0.8/docs/deepvariant-gvcf-support.md).
+
+
+### nice website for [ML](https://developers.google.com/machine-learning/crash-course/prereqs-and-prework)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
