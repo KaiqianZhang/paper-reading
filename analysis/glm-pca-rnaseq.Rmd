@@ -1,0 +1,57 @@
+---
+title: Feature selection and dimension reduction for single cell RNA-seq based on
+  a multinomial model
+author: "Kaiqian Zhang"
+date: "4/18/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Current problems
+
+- current method: normalizetion (normalize by factor size, log-transformation), feature selection by highly variable genes. might produce false variability in dimension reduction (PCA).
+
+- read counts: nonzero values are large, range is large.
+
+- UMI counts: nonzero values are small. same zero values as read counts.
+
+- psuedocount: introduce bias
+
+- highly variable genes: observed variability will depende on the pseudocount: psuedocounts close to zero arbitrarily increase the variance of the genes with zero counts. 
+
+- PCA: not good for highly sparse and skewed data, Euclidean distances assumes gaussian likelihood
+
+- normalization (size factor step) of raw counts = using MLE or MAP estimator of relative abundance
+
+- log(pseudocount+MAP estimator) resutls in zero inflation
+
+## Method
+
+- instead of PCA on log-normalized UMI counts, GLM-PCA on raw UMI counts
+
+- UMI counts $y_{ij}$ follows a multinomial distribution, can be approximated by independent Poisson distributions, overdispersed by independent negative binomial dsitributions. 
+
+- feature selection with deviance, and then dimension reduction with GLM-PCA
+
+
+
+
+
+
+
+
+
+
+
+## Conclusion
+
+- UMI counts follow multinomial distribution with no zero-inflation, which means no exaggration between zero and nonzero values.
+
+- 
