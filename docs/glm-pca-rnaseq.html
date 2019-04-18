@@ -9,9 +9,10 @@
 <meta name="generator" content="pandoc" />
 
 
+<meta name="author" content="Kaiqian Zhang" />
 
 
-<title>Home</title>
+<title>Feature selection and dimension reduction for single cell RNA-seq based on a multinomial model</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,7 +20,11 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
 
@@ -257,7 +262,101 @@ $(document).ready(function () {
 </script>
 
 <!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
 
+
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
 
 
 
@@ -267,6 +366,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -309,9 +418,19 @@ div.section {
 
 <div class="fluid-row" id="header">
 
+<div class="btn-group pull-right">
+<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
 
 
-<h1 class="title toc-ignore">Home</h1>
+
+<h1 class="title toc-ignore">Feature selection and dimension reduction for single cell RNA-seq based on a multinomial model</h1>
+<h4 class="author">Kaiqian Zhang</h4>
+<h4 class="date">4/18/2019</h4>
 
 </div>
 
@@ -339,7 +458,7 @@ div.section {
 <strong>Last updated:</strong> 2019-04-18
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 2 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>paper-reading/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
@@ -361,6 +480,54 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div id="strongRMarkdownfilestronguptodate" class="panel-collapse collapse">
 <div class="panel-body">
 <p>Great! Since the R Markdown file has been committed to the Git repository, you know the exact version of the code that produced these results.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongEnvironmentstrongempty"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Environment:</strong> empty </a>
+</p>
+</div>
+<div id="strongEnvironmentstrongempty" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! The global environment was empty. Objects defined in the global environment can affect the analysis in your R Markdown file in unknown ways. For reproduciblity it’s best to always run the code in an empty environment.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSeedstrongcodesetseed20190301code"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Seed:</strong> <code>set.seed(20190301)</code> </a>
+</p>
+</div>
+<div id="strongSeedstrongcodesetseed20190301code" class="panel-collapse collapse">
+<div class="panel-body">
+<p>The command <code>set.seed(20190301)</code> was run prior to running the code in the R Markdown file. Setting a seed ensures that any results that rely on randomness, e.g. subsampling or permutations, are reproducible.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongSessioninformationstrongrecorded"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Session information:</strong> recorded </a>
+</p>
+</div>
+<div id="strongSessioninformationstrongrecorded" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Recording the operating system, R version, and package versions is critical for reproducibility.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongCachestrongnone"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Cache:</strong> none </a>
+</p>
+</div>
+<div id="strongCachestrongnone" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Nice! There were no cached chunks for this analysis, so you can be confident that you successfully produced the results during this run.</p>
 </div>
 </div>
 </div>
@@ -426,7 +593,7 @@ Message
 Rmd
 </td>
 <td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/7fd0772ecc6f8768ef6dd5c7989d2977518152c1/analysis/index.Rmd" target="_blank">7fd0772</a>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/7fd0772ecc6f8768ef6dd5c7989d2977518152c1/analysis/glm-pca-rnaseq.Rmd" target="_blank">7fd0772</a>
 </td>
 <td>
 kaiqian
@@ -438,448 +605,6 @@ kaiqian
 paper for variable selection and dimension reduction for rna-seq data
 </td>
 </tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/a35e1029d6b8cc5e03fc6b691304bd81fb2d6466/docs/index.html" target="_blank">a35e102</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-14
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/43a151592689089a9398e6c7bf575f28ff7b31df/analysis/index.Rmd" target="_blank">43a1515</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-14
-</td>
-<td>
-notes for robustness2
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/81916db320bcc3b39a03063c2780cc776ac5f756/docs/index.html" target="_blank">81916db</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-11
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/cef8617f7677f3de342e3aab6d71c6806f84b0c9/analysis/index.Rmd" target="_blank">cef8617</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-11
-</td>
-<td>
-finish notes for paper 8 robustness
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/254753c30461dcd4c46de7b7834d04770b18c7b9/docs/index.html" target="_blank">254753c</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-08
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/05b804e4b3bbdeb92cad98fd8765ab5fb95ae48f/analysis/index.Rmd" target="_blank">05b804e</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-08
-</td>
-<td>
-upload notes for paper 7
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/65ceed3e8c1a1850f1cc1cc34cd559f6e3a278ef/docs/index.html" target="_blank">65ceed3</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/fbf55c9f2f028278e75ac1c25153f34d16511d97/docs/index.html" target="_blank">fbf55c9</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/574866b975d92d90235dbd25ced7014bd39c5f21/analysis/index.Rmd" target="_blank">574866b</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-05
-</td>
-<td>
-add notes for paper 6, paper 6 done!
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/849f9963ecc5f7205ffd43c14eb1c6e9540bb7df/docs/index.html" target="_blank">849f996</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-02
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/e3de7a156cf549f2f07542007dd067968c047465/analysis/index.Rmd" target="_blank">e3de7a1</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-02
-</td>
-<td>
-update index for deep variant
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/2c4d6b728dcb5ed695733b8bb1a0a27af518e182/docs/index.html" target="_blank">2c4d6b7</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/ff23eec029737feaeb05fcba955dd626f052272e/analysis/index.Rmd" target="_blank">ff23eec</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-04-01
-</td>
-<td>
-start paper 5 stocahstic gene expression reading
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/ffa0105ba12fd26d0957d3775493564054c6de6d/docs/index.html" target="_blank">ffa0105</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-27
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/357f5f8461d81c08b213dfea6983c1b101fc6cd0/analysis/index.Rmd" target="_blank">357f5f8</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-27
-</td>
-<td>
-update initial notes for optimality
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/e755c38c03e045b9321984ffb6c1540b45ca9627/docs/index.html" target="_blank">e755c38</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-22
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/1788783c5fa9c154c240042b014c31da8cd07584/analysis/index.Rmd" target="_blank">1788783</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-22
-</td>
-<td>
-update induction paper3
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/a4e88b5d70b4fb880b3ac97e875a542684e231f7/docs/index.html" target="_blank">a4e88b5</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-18
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/aff2fe3813ee6c85b0f01f0ba9f3af8d40285b62/analysis/index.Rmd" target="_blank">aff2fe3</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-18
-</td>
-<td>
-reading for metastasis results
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/c85a190389fd6203f7200cb88b3f5e715094b77c/docs/index.html" target="_blank">c85a190</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-05
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/a904c1bd6fafb162bc29e0f6783ffd8414bb2126/analysis/index.Rmd" target="_blank">a904c1b</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-05
-</td>
-<td>
-update bansenji
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/dac3104423bfaa06458a0d5b3aebc6e4823ba095/docs/index.html" target="_blank">dac3104</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/cd329aa7e7ed49c88aab7e0c3e0bb6cb77fc6005/analysis/index.Rmd" target="_blank">cd329aa</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-01
-</td>
-<td>
-update index
-</td>
-</tr>
-<tr>
-<td>
-html
-</td>
-<td>
-<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/1cb47e775e23efc8d45ea5a383275453cae8461a/docs/index.html" target="_blank">1cb47e7</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-01
-</td>
-<td>
-Build site.
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/6b6b047e27f28807d412decba08b09196e2cc4e4/analysis/index.Rmd" target="_blank">6b6b047</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-01
-</td>
-<td>
-create paper-reading repo first time
-</td>
-</tr>
-<tr>
-<td>
-Rmd
-</td>
-<td>
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/701c92ecd8033b15a4e05d9eb32e59e4f1dc56b1/analysis/index.Rmd" target="_blank">701c92e</a>
-</td>
-<td>
-kaiqian
-</td>
-<td>
-2019-03-01
-</td>
-<td>
-Start workflowr project.
-</td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -887,23 +612,62 @@ Start workflowr project.
 </div>
 </div>
 </div>
-<p>Welcome to my research website.</p>
-<p>This is my website for notes on paper reading.</p>
+<div id="current-problems" class="section level2">
+<h2>Current problems</h2>
 <ul>
-<li><p>Please click on <a href="basset.html">Basset: learning the regulartory code of the accessible genome with deep convolutional neural networks</a> to see notes.</p></li>
-<li><p>Please click on <a href="basenji.html">Basenji: Sequential regulatory activity prediction across chromosomes with convolutional neural networks</a> to see notes.</p></li>
-<li><p>Please click on <a href="DeepVariant.html">DeepVariant: A universal SNP and small-indel variant caller using deep neural networks</a> to see notes.</p></li>
-<li><p>Please click on <a href="bacteria-mutation.html">Mutations of bacteria from virus sensitivity to virus resistance</a> to see notes.</p></li>
-<li><p>Please click on <a href="metastasis-results.html">Metastasis results from preexisting variant cells within a malignant tumor</a> to see notes.</p></li>
-<li><p>Please click on <a href="induction.html">Enzyme induction as an all-or-none phenomenon</a> to see notes.</p></li>
-<li><p>Please click on <a href="optimality.html">Optimality and evolutionary tuning of the expression level of a protein</a> to see notes.</p></li>
-<li><p>Please click on <a href="stochastic.html">Stochastic gene expression in a single cell</a> to see notes.</p></li>
-<li><p>Please click on <a href="noise-fate.html">Noise in gene expression determines cell fate in Bacillus subtilis</a> to see notes.</p></li>
-<li><p>Please click on <a href="ultrasensitivity.html">An amplified sensitivity arising from covalent modification in biological systems</a> to see notes.</p></li>
-<li><p>Please click on <a href="robustness.html">Robustness in simple biochemical networks</a> to see notes.</p></li>
-<li><p>Please click on <a href="robustness2.html">Robustness in bacterial chemotaxis</a> to see notes.</p></li>
-<li><p>Please click on <a href="glm-pca-rnaseq.html">Feature selection and dimension reduction for single cell RNA-seq based on a multinomial model</a> to see notes.</p></li>
+<li><p>current method: normalizetion (normalize by factor size, log-transformation), feature selection by highly variable genes. might produce false variability in dimension reduction (PCA).</p></li>
+<li><p>read counts: nonzero values are large, range is large.</p></li>
+<li><p>UMI counts: nonzero values are small. same zero values as read counts.</p></li>
+<li><p>psuedocount: introduce bias</p></li>
+<li><p>highly variable genes: observed variability will depende on the pseudocount: psuedocounts close to zero arbitrarily increase the variance of the genes with zero counts.</p></li>
+<li><p>PCA: not good for highly sparse and skewed data, Euclidean distances assumes gaussian likelihood</p></li>
+<li><p>normalization (size factor step) of raw counts = using MLE or MAP estimator of relative abundance</p></li>
+<li><p>log(pseudocount+MAP estimator) resutls in zero inflation</p></li>
 </ul>
+</div>
+<div id="method" class="section level2">
+<h2>Method</h2>
+<ul>
+<li><p>instead of PCA on log-normalized UMI counts, GLM-PCA on raw UMI counts</p></li>
+<li><p>UMI counts <span class="math inline">\(y_{ij}\)</span> follows a multinomial distribution, can be approximated by independent Poisson distributions, overdispersed by independent negative binomial dsitributions.</p></li>
+<li><p>feature selection with deviance, and then dimension reduction with GLM-PCA</p></li>
+</ul>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<ul>
+<li><p>UMI counts follow multinomial distribution with no zero-inflation, which means no exaggration between zero and nonzero values.</p></li>
+<li><br> <br>
+<p>
+<button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
+<span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
+</button>
+</p></li>
+</ul>
+<div id="workflowr-sessioninfo" class="collapse">
+<pre class="r"><code>sessionInfo()</code></pre>
+<pre><code>R version 3.5.3 (2019-03-11)
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+Running under: macOS Sierra 10.12.6
+
+Matrix products: default
+BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] stats     graphics  grDevices utils     datasets  methods   base     
+
+loaded via a namespace (and not attached):
+ [1] workflowr_1.2.0 Rcpp_1.0.1      digest_0.6.18   rprojroot_1.3-2
+ [5] backports_1.1.4 git2r_0.25.2    magrittr_1.5    evaluate_0.13  
+ [9] stringi_1.4.3   fs_1.2.7        whisker_0.3-2   rmarkdown_1.12 
+[13] tools_3.5.3     stringr_1.4.0   glue_1.3.1      xfun_0.5       
+[17] yaml_2.2.0      compiler_3.5.3  htmltools_0.3.6 knitr_1.22     </code></pre>
+</div>
+</div>
 
 
 <!-- Adjust MathJax settings so that all math formulae are shown using
@@ -919,6 +683,8 @@ footer is added to webpages before the MathJax javascript. -->
 </script>
 
 
+</div>
+</div>
 
 </div>
 
