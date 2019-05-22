@@ -1,0 +1,32 @@
+---
+title: "Using mathematical models to help understand biological pattern formation"
+author: "Kaiqian Zhang"
+date: "5/19/2019"
+header-includes:
+   - \usepackage{amsmath}
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Goal 
+
+Use mathematical models to describe pattern formation in biological systems.
+
+## Chemical pre-pattern models
+
+* Turing showed that complicated spatial patterns can be generated due to reaction and diffusion of a number of chemicals, a phenomenon known as diffusion-driven instability.
+
+* [diffusion-driven instability]: a spatially uniform steady state, linearly stable in the absence of diffusion, becomes linearly unstable in the presence of diffusion. 
+
+* In Turing's original model, $f$ and $g$ were linear so that if the uniform steady state became unstable, then the chemical concentrations would grow exponentially. This is biologically unrealistic. So many other models after Turing were derived.
+
+## Discussion
+The Turing model, and subsequent modeling approaches it has inspired, provide a way of thinking about pattern formation that is different to how it had been thought before, it increases our intuition, and understanding of the patterning possiblities afforded by combining reactions and diffusions. 
+
+
+

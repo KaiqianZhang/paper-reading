@@ -36,6 +36,10 @@ This is my website for notes on paper reading.
 
 * Please click on [Feature selection and dimension reduction for single cell RNA-seq based on a multinomial model](glm-pca-rnaseq.html) to see notes. 
 
+* Please click on [Using mathematical models to help understand biological pattern formation](turing-model.html) to see notes.
+
+
+
 
 
 
