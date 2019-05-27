@@ -38,6 +38,8 @@ This is my website for notes on paper reading.
 
 * Please click on [Using mathematical models to help understand biological pattern formation](turing-model.html) to see notes.
 
+* Please click on [The optimal discovery procedure for significance analysis of general gene expression studies (John 1)](john1.html) to see notes.
+
 
 
 

@@ -1,0 +1,41 @@
+---
+title: "The optimal discovery procedure for significance analysis of general gene expression studies (John 1)"
+author: "Kaiqian Zhang"
+date: "5/27/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Keywords
+
+- mODP: extended ODP(optimal discovery procedure)
+
+## Innovation/Problem
+
+- Prior applications of ODP are focused on microarray studies and it is assumed that data generating process is approximately normal and homoscedastic. In sequencing studies, however, the observations are heteroscedastic.
+
+## Comparison
+
+-  Compare with F-test and moderated F-test
+
+## Useful methods for toolkit
+
+- The expression values were log-transformed for variance stabilization.
+
+- Usually filtering genes with fewer than 10 reads across all samples.
+
+- The R package `limma` is used to estimate the inverse-variance weights for the weighted least squares implementation.
+
+- Shrinking sample variance towards a pooled variance allows for more stable inferences with low sample size studies.
+
+- Introduce a summary statistic for gene sets based on the enrichment of true positives. 
+
+## Dataset
+
+
+
