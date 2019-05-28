@@ -12,7 +12,7 @@
 <meta name="author" content="Kaiqian Zhang" />
 
 
-<title>The optimal discovery procedure for significance analysis of general gene expression studies (John 1)</title>
+<title>PG-TS: Improved Thompson Sampling for Logistic Contextual Bandits (Barbara 4)</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -324,9 +324,9 @@ div.section {
 
 
 
-<h1 class="title toc-ignore">The optimal discovery procedure for significance analysis of general gene expression studies (John 1)</h1>
+<h1 class="title toc-ignore">PG-TS: Improved Thompson Sampling for Logistic Contextual Bandits (Barbara 4)</h1>
 <h4 class="author"><em>Kaiqian Zhang</em></h4>
-<h4 class="date"><em>5/27/2019</em></h4>
+<h4 class="date"><em>5/28/2019</em></h4>
 
 </div>
 
@@ -399,7 +399,7 @@ Message
 Rmd
 </td>
 <td style="text-align:left;">
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/fd6b187346d768ed8a5b0a0f51f87ea88c250574/analysis/john1.Rmd" target="_blank">fd6b187</a>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/fd6b187346d768ed8a5b0a0f51f87ea88c250574/analysis/barbara4.Rmd" target="_blank">fd6b187</a>
 </td>
 <td style="text-align:left;">
 kaiqian
@@ -411,40 +411,6 @@ kaiqian
 add notes for barbara paper 4 PG-TS
 </td>
 </tr>
-<tr>
-<td style="text-align:left;">
-html
-</td>
-<td style="text-align:left;">
-<a href="https://cdn.rawgit.com/KaiqianZhang/paper-reading/7f6460a88e762d422798e86b30610f7dd364cec5/docs/john1.html" target="_blank">7f6460a</a>
-</td>
-<td style="text-align:left;">
-kaiqian
-</td>
-<td style="text-align:left;">
-2019-05-27
-</td>
-<td style="text-align:left;">
-Build site.
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-Rmd
-</td>
-<td style="text-align:left;">
-<a href="https://github.com/KaiqianZhang/paper-reading/blob/fa99c3c51830b42c15e151e5e8c7cc36c7ea4323/analysis/john1.Rmd" target="_blank">fa99c3c</a>
-</td>
-<td style="text-align:left;">
-kaiqian
-</td>
-<td style="text-align:left;">
-2019-05-27
-</td>
-<td style="text-align:left;">
-add notes for john paper 1 mODP
-</td>
-</tr>
 </tbody>
 </table>
 </ul>
@@ -453,29 +419,37 @@ add notes for john paper 1 mODP
 <div id="keywords" class="section level2">
 <h2>Keywords</h2>
 <ul>
-<li>mODP: extended ODP(optimal discovery procedure)</li>
+<li><p>Improved version of Thompson sampling</p></li>
+<li><p>Polya-Gamma augmentation</p></li>
+<li><p>Logistic contextual bandits problem</p></li>
+<li><p>Reinforcement learning</p></li>
+<li><p>News article recommendation</p></li>
 </ul>
 </div>
 <div id="innovationproblem" class="section level2">
 <h2>Innovation/problem</h2>
 <ul>
-<li>Prior applications of ODP are focused on microarray studies and it is assumed that data generating process is approximately normal and homoscedastic. In sequencing studies, however, the observations are heteroscedastic.</li>
+<li><p>Improve the TS approach for contextual bandits with logistic rewards.</p></li>
+<li><p>Laplace-TS: Laplace approximation struggles when the dimension of the context (arm features) is larger than the number of arms, and when the features themselves are non-Gaussian.</p></li>
+<li><p>PG-TS: PG part is this algorithm uses the PG augmentation scheme to represent the binomial distributions of the sequential rewards in terms of latent variables with Gaussian distributions to perform tractable Bayesian logistic regression in a Thompson Sampling setting.</p></li>
+<li><p>existed problem 1: PG-TS provides an efficient online approximation scheme for the analytically intractable logistic posterior.</p></li>
+<li><p>existed problem 2: since PG-TS explicitly estimate context feature covariances, it is more effective in balancing exploitation and exploration relative to Laplace-TS, which assumes indenpendence of each context feature.</p></li>
 </ul>
 </div>
-<div id="comparison" class="section level2">
-<h2>Comparison</h2>
+<div id="so-far-state-of-the-art" class="section level2">
+<h2>So far state-of-the-art</h2>
 <ul>
-<li>Compare with F-test and moderated F-test</li>
+<li>Laplace-TS (Thompson sampling)</li>
 </ul>
 </div>
 <div id="useful-factstools" class="section level2">
 <h2>Useful facts/tools</h2>
 <ul>
-<li><p>The expression values were log-transformed for variance stabilization.</p></li>
-<li><p>Usually filtering genes with fewer than 10 reads across all samples.</p></li>
-<li><p>The R package <code>limma</code> is used to estimate the inverse-variance weights for the weighted least squares implementation.</p></li>
-<li><p>Shrinking sample variance towards a pooled variance allows for more stable inferences with low sample size studies.</p></li>
-<li><p>Introduce a summary statistic for gene sets based on the enrichment of true positives.</p></li>
+<li><p>A contextual bandit is an online learning framework for modeling sequential decision-making problems. The learner’s goal in each round is to select the arm that minimizes the cumulative regrets. See also this zhihu page: <a href="https://zhuanlan.zhihu.com/p/21388070" class="uri">https://zhuanlan.zhihu.com/p/21388070</a></p></li>
+<li><p>The logistic likelihood is a mixture of Gaussians with Polya-Gamma mixing distributions.</p></li>
+<li><p>The advantages of Polya-Gamma augmentation has been proven in multiple Gibbs sampling and variational inference approaches, including binomial models, multinomial models, and negative binomial regression models with logit link functions.</p></li>
+<li><p>Ususally use Dirichlet distribution to model weights of mixtures.</p></li>
+<li><p>Always have a baseline method for methods comparisons in the analyses.</p></li>
 </ul>
 </div>
 <div id="session-information" class="section level2">
