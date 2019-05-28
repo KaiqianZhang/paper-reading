@@ -1,0 +1,56 @@
+---
+title: 'PG-TS: Improved Thompson Sampling for Logistic Contextual Bandits (Barbara 4)'
+author: "Kaiqian Zhang"
+date: "5/28/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Keywords
+
+- Improved version of Thompson sampling
+
+- Polya-Gamma augmentation
+
+- Logistic contextual bandits problem
+
+- Reinforcement learning
+
+- News article recommendation
+
+## Innovation/problem
+
+- Improve the TS approach for contextual bandits with logistic rewards.
+
+- Laplace-TS: Laplace approximation struggles when the dimension of the context (arm features) is larger than the number of arms, and when the features themselves are non-Gaussian.
+
+- PG-TS: PG part is this algorithm uses the PG augmentation scheme to represent the binomial distributions of the sequential rewards in terms of latent variables with Gaussian distributions to perform tractable Bayesian logistic regression in a Thompson Sampling setting.
+
+- existed problem 1: PG-TS provides an efficient online approximation scheme for the analytically intractable logistic posterior.
+
+- existed problem 2: since PG-TS explicitly estimate context feature covariances, it is more effective in balancing exploitation and exploration relative to Laplace-TS, which assumes indenpendence of each context feature. 
+
+## So far state-of-the-art
+
+- Laplace-TS (Thompson sampling)
+
+## Useful facts/tools
+
+- A contextual bandit is an online learning framework for modeling sequential decision-making problems. The learner's goal in each round is to select the arm that minimizes the cumulative regrets. See also this zhihu page: https://zhuanlan.zhihu.com/p/21388070
+
+- The logistic likelihood is a mixture of Gaussians with Polya-Gamma mixing distributions.
+
+- The advantages of Polya-Gamma augmentation has been proven in multiple Gibbs sampling and variational inference approaches, including binomial models, multinomial models, and negative binomial regression models with logit link functions. 
+
+- Ususally use Dirichlet distribution to model weights of mixtures.
+
+- Always have a baseline method for methods comparisons in the analyses.
+
+
+
+

@@ -15,7 +15,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - mODP: extended ODP(optimal discovery procedure)
 
-## Innovation/Problem
+## Innovation/problem
 
 - Prior applications of ODP are focused on microarray studies and it is assumed that data generating process is approximately normal and homoscedastic. In sequencing studies, however, the observations are heteroscedastic.
 
@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 -  Compare with F-test and moderated F-test
 
-## Useful methods for toolkit
+## Useful facts/tools
 
 - The expression values were log-transformed for variance stabilization.
 
@@ -35,7 +35,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Introduce a summary statistic for gene sets based on the enrichment of true positives. 
 
-## Dataset
+
 
 
 
