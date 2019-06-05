@@ -42,6 +42,8 @@ This is my website for notes on paper reading.
 
 * Please click on [PG-TS: Improved Thompson Sampling for Logistic Contextual Bandits (Barbara 4)](barbara4.html) to see notes.
 
+* Please click on [Protein sectors: evolutionary units of three-dimensional structure (QCB 515 paper 19)](QCBpaper19.html) to see notes.
+
 
 
 

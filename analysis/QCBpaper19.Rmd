@@ -1,0 +1,31 @@
+---
+title: 'Protein sectors: evolutionary units of three-dimensional structure'
+author: "Kaiqian Zhang"
+date: "6/5/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Main idea
+
+- decompose protein into three independent "protein sectors"
+
+- based sequence conservation; correlations of sequence positions
+
+- model system used: S1A family
+
+- four charactersitics of "protein sectors":
+
+    * statistical independence
+    
+    * physical connectivity in the tertiary structure
+    
+    * biochemical independence in mediating protein function
+    
+    * independent phenotypic variation in the protein family
+
