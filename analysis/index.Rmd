@@ -44,7 +44,7 @@ This is my website for notes on paper reading.
 
 * Please click on [Protein sectors: evolutionary units of three-dimensional structure (QCB 515 paper 19)](QCBpaper19.html) to see notes.
 
-
+* Please click on [Patient-Specific Effects of Medication Using Latent Force Models with Gaussian Processes (Barbara 5)](barbara5.html)
 
 
 
