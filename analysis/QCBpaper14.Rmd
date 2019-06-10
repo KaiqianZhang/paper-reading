@@ -1,0 +1,24 @@
+---
+title: "Identification of common molecular subsequences (Smith-Waterman Algorithm)"
+author: "Kaiqian Zhang"
+date: "6/10/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Problem
+
+* Given two long sequences, we want to find a pair of segments with largest similarity (homology). The method also allows for arbitrary length deletions and insertions.
+
+## Youtube lecture
+
+* Please refer to the lecture that illustrates [`Needleman-Wunsch-Sellers` algorithm](https://www.youtube.com/watch?v=PdyARRNwi7I&list=PLUl4u3cNGP63uK-oWiLgO7LLJV6ZCWXac&index=3) from 45:00 to 1:02:17.
+
+
+
+

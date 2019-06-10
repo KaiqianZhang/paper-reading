@@ -10,11 +10,19 @@ Welcome to my research website.
 
 This is my website for notes on paper reading. 
 
+
+
+## Reading with Mengjie on deep learning
+
 * Please click on [Basset: learning the regulartory code of the accessible genome with deep convolutional neural networks](basset.html) to see notes.
 
 * Please click on [Basenji: Sequential regulatory activity prediction across chromosomes with convolutional neural networks](basenji.html) to see notes.
 
 * Please click on [DeepVariant: A universal SNP and small-indel variant caller using deep neural networks](DeepVariant.html) to see notes.
+
+
+
+## QCB 515 paper reading
 
 * Please click on [Mutations of bacteria from virus sensitivity to virus resistance](bacteria-mutation.html) to see notes.
 
@@ -38,15 +46,28 @@ This is my website for notes on paper reading.
 
 * Please click on [Using mathematical models to help understand biological pattern formation](turing-model.html) to see notes.
 
-* Please click on [The optimal discovery procedure for significance analysis of general gene expression studies (John 1)](john1.html) to see notes.
+* Please click on [Identification of common molecular subsequences (Smith-Waterman Algorithm)](QCBpaper14.html) to see notes. 
 
-* Please click on [PG-TS: Improved Thompson Sampling for Logistic Contextual Bandits (Barbara 4)](barbara4.html) to see notes.
+
 
 * Please click on [Protein sectors: evolutionary units of three-dimensional structure (QCB 515 paper 19)](QCBpaper19.html) to see notes.
 
-* Please click on [Patient-Specific Effects of Medication Using Latent Force Models with Gaussian Processes (Barbara 5)](barbara5.html)
 
 
+
+## Barbara Engelhardt paper reading
+
+* Please click on [PG-TS: Improved Thompson Sampling for Logistic Contextual Bandits (Barbara 4)](barbara4.html) to see notes.
+
+* Please click on [Patient-Specific Effects of Medication Using Latent Force Models with Gaussian Processes (Barbara 5)](barbara5.html) to see notes. 
+
+
+
+
+
+## John Storey paper reading
+
+* Please click on [The optimal discovery procedure for significance analysis of general gene expression studies (John 1)](john1.html) to see notes.
 
 
 
