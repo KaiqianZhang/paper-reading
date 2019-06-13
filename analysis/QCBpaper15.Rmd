@@ -1,0 +1,40 @@
+---
+title: 'Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach'
+author: "Kaiqian Zhang"
+date: "6/13/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Problem
+
+To estimate evolutionary trees from sequences.
+
+
+## Methods
+
+- Iteratively find the optimum tree topology. 
+
+- Given a tree topology, find the maximum tree by finding optimum segment length, iteratively.
+
+- Given a tree, compute likelihood of a tree (likelihood of data given the tree).
+    
+    * Compute substitution probability $P_{ij}$ (probablity of changing base from $i$ to $j$)
+    
+    * Pulley principle: we could regard any unrooted tree as containing the root.
+    
+    
+## Limitation
+
+- Not allow for deletion and insertion.
+
+- Constraints on amino acid substitution.
+
+
+
+
