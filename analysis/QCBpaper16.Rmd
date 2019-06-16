@@ -1,0 +1,35 @@
+---
+title: "Cluster analysis and display of genome-wide expression patterns"
+author: "Kaiqian Zhang"
+date: "6/16/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Keywords
+
+- Genome analysis, clustering
+
+## Method
+
+- adopt a mathematical description for gene expression similarity: standard correlation coefficient (i.e the dot prodoct of two normalized vectors???)
+
+    - formula under section `Metrics`. Note that $G_{\text{offset}}$ is not the mean of observations, and set to $0$.
+
+- unsupervised learning: pairwise average-linkage cluster analysis.
+
+    - gene: tree; similarity: length of branch
+    
+    - given correlation matrix of gene expression
+    
+    - identify the highest value, which leads to the most similar pair of genes
+    
+    - a node is created for joining these two genes, then this node replace these two genes by using a mean value of two
+    
+    - repeat the process

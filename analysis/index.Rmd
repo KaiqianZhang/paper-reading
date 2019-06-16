@@ -50,6 +50,8 @@ This is my website for notes on paper reading.
 
 * Please click on [Evolutionary Trees from DNA Sequences: A Maximum Likelihood Approach (QCB 515 paper 15)](QCBpaper15.html) to see notes.
 
+* Please click on [Cluster analysis and display of genome-wide expression patterns (QCB 515 paper 16)](QCBpaper16.html) to see notes. 
+
 
 
 * Please click on [Protein sectors: evolutionary units of three-dimensional structure (QCB 515 paper 19)](QCBpaper19.html) to see notes.
