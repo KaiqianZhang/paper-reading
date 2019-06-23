@@ -52,6 +52,10 @@ This is my website for notes on paper reading.
 
 * Please click on [Cluster analysis and display of genome-wide expression patterns (QCB 515 paper 16)](QCBpaper16.html) to see notes. 
 
+* Please click on [PGC-1α-responsive genes involved in oxidative phosphorylation are coordinately downregulated in human diabetes (QCB 515 paper 17)](QCBpaper17.html) to see notes.
+
+* Please click on [Evolutionary information for specifying a protein fold (QCB 515 paper 18)](QCBpaper18.html) to see notes. 
+
 
 
 * Please click on [Protein sectors: evolutionary units of three-dimensional structure (QCB 515 paper 19)](QCBpaper19.html) to see notes.

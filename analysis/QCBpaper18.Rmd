@@ -1,0 +1,88 @@
+---
+title: "Evolutionary information for specifying a protein fold"
+author: "Kaiqian Zhang"
+date: "6/23/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Keywords
+
+- Protein folding
+
+## Model assumptions
+
+- Amino acid interactions specifying the atomic structure are conserved throughout members of a protein family rather than being idiosyncratic; 
+
+- Conservation is a distributed rather than site- independent property because it fundamentally arises from the cooperativity of energetic interactions;
+
+- The parsing of conservation is well estimated by the statistical energy function contained in the SCA method. 
+
+## Conclusion
+
+- A significant fraction of CC sequences are natively folded whereas IC sequences are not provides strong support for these hypotheses. This result is particularly informative because CC sequences are statistically indistinguishable from IC sequences with regard to sequence divergence from natural WW domains. 
+
+- We conclude that it is the specific distribution of conservation rather than the quantity of conservation that dictates native folding.
+
+- The global pattern of coevolutionary interactions is sparse. (from intro) 
+
+- The strongly coevovling residues are spatially organized into physically connected networks linking distant functional sites in the structure through packing interactions. (from intro)
+
+## Analysis detail
+
+### SCA: method for constructing sequences
+
+- SCA: an evolution-based method known as statistical coupling analysis.
+
+    - Idea of SCA: the conserved functional coupling of sites in a protein should drive their mutual coevolution.
+    
+- Design novel protein sequences using only SCA information.
+
+    - IC model: site-independent conservation model. Presume conservation but eliminate all statistical couplings between sites. Simply select amino acids at each site independently based on the observed frequency distribution in the natural alignment.
+    
+    - CC model: coupled conservation model. Build artificial sequences that preserve both conservation pattern and the pattern of statistical couplings. 
+    
+### Types of sequences analyzed
+
+- Use (1) 42 natural WW sequences (2) 43 IC sequences (3) 43 CC sequences (4) 19 random sequences
+
+- Natural sequences were built as positive controls because we do not know how many of these will fold when expressed as recombinant proteins in bacteria.
+
+- Random sequences are negative controls; they contain no site-specific information and are not expected to fold.
+
+### Experimental analysis
+
+- Rigorous criteria for folding: artificial sequences were declared as folded only if they showed cooperative and reversible thermal denaturation and 1H-NMR spectra consistent with a native state. 
+
+
+## Observation
+
+- The IC and CC sequences also show similar ‘top-hit’ identities. This indicates that despite additional constraints in their design, CC sequences are about as diverged as IC sequences; by this measure, the number of extra constraints arising from the SCA matrix is small.
+
+- The experiemental data demonstrate that some CC sequences are natively folded with thermodynamic properties similar to that of natural WW domains, and that no IC sequences are natively folded.
+
+- Figure 4a. Sixty-seven per cent of natural WW sequences were folded by the criteria described above, a number that simply reflects the efficiency of producing randomly chosen WW domains in our expression system. As expected, no random sequences were folded, although nearly half of these were well expressed and soluble. No IC sequences were natively folded, although a substantial fraction (70%) was soluble. ... However, the site- independent conservation model is insufficient to produce the native state. In contrast, over one-quarter of the CC sequences were natively folded. 
+
+- Taken together, the data argue that in addition to the amino acid distributions at sites, the statistical coupling information is necessary and sufficient to specify native folding.
+
+- CC45 example.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
