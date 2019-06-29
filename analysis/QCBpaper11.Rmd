@@ -1,0 +1,68 @@
+---
+title: "Establishment of developmental precision and proportions in the early Drosophila embryo (QCB 515 paper 11)"
+author: "Kaiqian Zhang"
+date: "6/24/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Keyword
+
+## Background
+
+- Magazine related material: https://cosmosmagazine.com/biology/exploring-the-precision-of-embryonic-development.
+
+## Notation
+
+- $x_{\text{Bcd}}$: For Bcd protein profile, the position along the embryo at which each curve crosses a certain threshold (t). 
+
+## Conclusions
+
+### Two main conclusions
+
+- At a very early stage, noise associated with the maternal gradient of Bcd is filtered out, and at the same time the genetic network, which includes the Hb gap gene, establishes spatial proportions (scaling) in the embryo.
+
+- It is potentially significant that `staufen`, the one gene affecting the process, makes a product that localizes to both poles of the egg.
+
+### Other conclusions throughout the article
+
+- The Bcd profile displays a high embryo-to-embryo variability. 
+
+- In contrast to Bcd, the Hb protein profile displays an extreme reproducibility from embryo to embryo. (i.e. low variability)
+
+- $x_{Bcd}$ has little correlation with the embryo length.
+
+- In contrast to Bcd, however, the position of the Hb boundary displays a strong correlation with the embryo length. 
+
+- hb mRNA displays the same precision and conservation of proportions as Hb protein. 
+
+- The Bcd profile is sensitive to temperature.
+
+- However, no change in the position and variability of Hb was observed. Thus, variations due to temperature changes are also compensated at the level of hb expression.
+
+- When Hb precision arises? At cycle 13, $r_s$ rose to 0.7 (P = 0.00015), and further increased to 0.8 during cycle 14.
+
+- All the genes downstream of hb that we have measured (Kr, kni, gt, eve) display the same spatial precision as hb.
+
+- The best candidate for a maternal posterior gradient is nanos (nos). Thus nos mutations can modify the average position of the Hb boundary without affecting its precision or scaling.
+
+- Hb boundary position and its low embryo-to- embryo variability are not affected in Kr mutants.
+
+- Among all the mutations we have studied, the only ones that affect Hb boundary precision are certain alleles of the maternal gene staufen (stau). 
+
+
+## Model: morphogen gradient model
+
+- The most widely accepted model describing how cells in early embryos acquire their positional information: because the concentration of a morphogen decreases with the distance from one pole, measuring this concentration informs a cell of its position inside the embryo.
+
+
+
+
+
+
+
