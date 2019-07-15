@@ -46,11 +46,9 @@ This is my website for notes on paper reading.
 
 * Please click on [Using mathematical models to help understand biological pattern formation](turing-model.html) to see notes.
 
-* Please click on [Establishment of developmental precision and proportions in the early Drosophila embryo (QCB 515 paper 11)](QCBpaper11.html)
+* Please click on [Establishment of developmental precision and proportions in the early Drosophila embryo (QCB 515 paper 11)](QCBpaper11.html) to see notes.
 
-
-
-
+* Please click on [Genetic drift, selection and the evolution of the mutation rate (QCB 515 paper 13)](QCBpaper13.html) to see notes.
 
 * Please click on [Identification of common molecular subsequences (Smith-Waterman Algorithm) (QCB 515 paper 14)](QCBpaper14.html) to see notes.
 

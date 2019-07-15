@@ -1,0 +1,90 @@
+---
+title: "Genetic drift, selection and the evolution of the mutation rate"
+author: "Kaiqian Zhang"
+date: "7/12/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Notation
+
+- $u$: base subsititution mutation rate 
+
+- $G_e$: effective genome size
+
+- $U_D$: $U_D = u*G_e$ genome-wide deleterious mutation rate 
+
+- $U_P$: the product of u and the number of nucleotide sites in the exons of protein-coding genes (P).
+
+- $N_e$: effective population size
+
+
+## Drift-barrier hypothesis
+
+- The level of perfection of any molecular trait is expected to become more refined in the larger populations. However, as the efficiency of selection increases, the stochastic effects of genetic drift decreases. 
+
+- With high initial mutation rates (black, red), the advantage of antimutators is sufficiently large that the mutation rate will evolve downwardly until the strength of selection is matched by the opposing pressure from random genetic drift and mutation bias.
+
+## Estimation of mutation rate
+
+- $u$ is usually at low level.
+
+- Method for estimating mutation rate: mutation-accumulation (MA) experiments
+
+    - Following the mutation accumulation (MA) procedure, the complete genomes of replicate lines are sequenced.
+    
+    - Under the assumption of effectively neutral MA, the average rate of increase in numbers of mutations per line is equivalent to the mutation rate.
+    
+    - The spectrum of mutations covers every type of alteration. 
+    
+## Phylogenetic variation in mutation rate
+
+- Consider some population-genetic factors that govern all evolutionary processes.
+
+### General scaling relationships from mutation rates
+
+- Fig 3b: there is significant negative relationship between $u$ and $N_e$ on a logarithmic scale. 
+
+- Fig 3c: $U_D$ decreases with increasing $N_e$.
+
+### Error prone polymerases
+
+- Hypothesis 1: selection promotes high error rates in polymerases to generate mutations in order to adapt environments.
+
+- Hypothesis 2: the net selection pressure to improve accuracy is proportional to the average number of nucleotide transactions that a DNA polymerase engages in per generation.
+
+- Collectively, idea: less frequently used polymerases naturally evolve higher error rates.
+
+### Caveats and alternative interpretations of the data
+
+- Both the data and the theory are inconsistent with the idea that mutation-rate evolution is guided by a population-level goal of maximizing the rate of incorporation of beneficial mutations.
+
+## Gene level features
+
+- Several-fold changes in mutation rates can arise as a simple consequence of the chromosomal location and/or orientation of the construct, independent of other features.
+
+- Transcription has mild mutagenic effects.
+
+- Changes in mutation rates following gene relocations do not arise so much from HoCs as from the simple context alterations noted above.
+
+## Closing comments
+
+- Main conclusion: selection minimizes the mutation rate, but the efficiency will be overcome by the power of random genetic drift.
+
+- The precise point of drift barrier is determined by the relative rates of the production of mutator and antemutator alleles.
+
+
+
+
+
+
+
+
+
+
+
