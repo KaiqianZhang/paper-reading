@@ -1,0 +1,67 @@
+---
+title: "High-throughput Sequencing of the Zebrafish Antibody Repertoire"
+author: "Kaiqian Zhang"
+date: "7/16/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Background
+
+- Youtube link: [VDJ recombination](https://www.youtube.com/watch?v=FUsekJc2O1s)
+
+## Finding
+
+### Abundance distribution of VDJ repertoire
+
+- VDJ usage is not uniform: 
+
+    - a small number of VDJ combinations are highly expressed in each fish, and most VDJ combinations are represented only at a low abundance.
+
+    - As one sequences more deeply into a fish, the number of new VDJ classes discovered saturated.
+
+- Individual can have highly correlated VDJ repertoire 
+
+    - Most fish are uncorrelated in their VDJ repertoires; however, some fish are highly correlated.(surprised!)
+
+    - Simulation with null ditribution shows that in zebrafish the VDJ repertoire appears substantially structured and nonrandom on a global scale.
+
+### Abundance distribution of antibody heavy-chain diversity
+
+- We found that the overall distribution of the abundances of the antibodies followed an apparent power law with scaling parameter 2.2, and this was consistent among all fish over two decades. 
+
+- Estimate the number of unique antibodies per fish: lower bound: 1200-3700; upper bound: 5000-6000.
+
+- Shared antibodies: there were 254 unique sequences shared between two fish and 2 unique sequences shared between five fish.
+
+## Technique
+
+- Shannon-Weaver entropy: summarizes the frequency distribution in a single number.
+
+    - goal: try not to neglect the variation in abundance of different VDJ species.
+    
+    - The VDJ repertoire entropies generally varied between 3.1 and 7.7 bits for different fish.
+    
+    
+- quality threshold clustering of Smith-Waterman alignments: group similar reads, and each cluster is an antibody.
+
+    - goal: seperate true hypermutation diversity from sequencing errors
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+

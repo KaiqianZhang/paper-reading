@@ -60,9 +60,11 @@ This is my website for notes on paper reading.
 
 * Please click on [Evolutionary information for specifying a protein fold (QCB 515 paper 18)](QCBpaper18.html) to see notes. 
 
-
-
 * Please click on [Protein sectors: evolutionary units of three-dimensional structure (QCB 515 paper 19)](QCBpaper19.html) to see notes.
+
+* Please click on [High-throughput Sequencing of the Zebrafish Antibody Repertoire (QCB 515 paper 20)](QCBpaper20.html) to see notes.
+
+
 
 
 
