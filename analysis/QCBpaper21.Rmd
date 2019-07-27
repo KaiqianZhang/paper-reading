@@ -1,0 +1,156 @@
+---
+title: "Maximum entropy models for antibody diversity"
+author: "Kaiqian Zhang"
+date: "7/25/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Model: a statistical physics problem
+
+- Build `maximum entropy models` of the sequence repertoire. 
+
+    - Connection to statistics: in the form of Boltzmann distribution.
+    
+    - How to quantify: assign each sequence with an effective energy
+    
+
+- Based on pairwise correlations between residue positions. 
+
+- But capture higher order statistical properties of repertoire.
+
+## Prediction
+
+- The distribution of sequences obeys Zipf's law.
+
+- The repertoire decomposes into several clusters, a restriction on diversity because of correlation.
+
+## Implication
+
+- Antibody diversity is not limited by the sequences encoded in the genome.
+
+- May reflect rapid adaptation to antigenic challenges.
+
+
+## Extension
+
+- Used for study other protein families.
+
+Begin reading: 
+
+## Method
+
+### What does each sequence look like?
+
+- About 200 nucleotides long, covering the last 90 nucleotides of V and all of D and J.
+
+- Each fish has 28,000 to 112,000 sequences.
+
+### Why D region among VDJ?
+
+- The V and J segments are easily aligned with the genome.
+
+- The D region is more diverse than expected, having the most nongenomic diversity.
+
+### Mutual information between residue positions
+
+- A measure of variability within VDJ classes.
+
+- Residues in the D region are very variable and correlated even within a given D class.
+
+- Suggest: we should focus on D region.
+
+### Maximum entropy model
+
+- Goal: build the least structured model for $P(\boldsymbol{\sigma})$. 
+
+- Minimize structure = maximize the entropy.
+
+- Process of finding $P^{(m)}$:
+
+    - Write the model distribution $P^{(m)}$ in the form of Boltzmann distribution.
+    
+    - Choose parameters $h, J, \mu$ such that $P^{(m)}(L)$, $P^{(m)}_1$, and $P^{(m)}_2$ agree with the data.
+    
+    - Use Monte Carlo with gradient descent to infer $P^{(m)}$.
+
+## Testing and prediction
+
+### Local biases:
+
+- Since the model does not incorporate any site specificity, the model prediction has certain `end effects`.
+
+### Zipf's law:
+
+- The rank of a state $\boldsymbol{\sigma}$ is determined by the number of states with higher probability.
+
+- Zipf's law restricts the set of allowed sequences substantially but not too much.
+
+### Entropy:
+
+- $I^{(m)}/I$ indicates that our maximum entropy model captures between two-thirds and 90% of all the correlated structure in the distribu- tion of sequences.
+
+### Comparisons between fish
+
+- Similarity factor Sim$[P_{\alpha}, P_{\beta}]$：measures the difficulty of guessing to which of the two repertoires $(\alpha, \beta)$ a given sequence belongs.
+
+- Mutual information between fish and sequence: concludes that all 13 fish do not suffice to cover the potential diversity of D regions, as evidenced by the absence of saturation.
+
+### [?] I did not get multivalley landscape
+
+
+## Notation
+
+- $A-N$: the label of 14 zebrafish.
+
+- $L$: length of the sequence.
+
+- $K=1,2,3,4$: interaction ranges.
+
+- $P(\boldsymbol{\sigma})$: the probability that being $(\sigma_1, \dots, \sigma_L)$. Experiments cannot characterize this. 
+
+- $P_1(\sigma)$: the probability of $\sigma$ amino acid.
+
+- $P_2(\sigma, \sigma';k)$: the probability that two particular amono acids appear to seperated by a distance $k$.
+
+- $P(L)$: observed distribution of the length of D region.
+
+- $P^{(m)}$: model distribution.
+
+- $h, J, \mu$: parameters.
+
+- $I$: multiinformation. The overall strength of correlations in the system.
+
+- $I^{(m)}/I$: the fraction of the correlated structure that we capture in the model.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- entropy = disorder/uncertainty of the system
+
+- $P$: probability distribution 
+
+
+
+

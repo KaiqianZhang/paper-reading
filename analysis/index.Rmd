@@ -64,8 +64,7 @@ This is my website for notes on paper reading.
 
 * Please click on [High-throughput Sequencing of the Zebrafish Antibody Repertoire (QCB 515 paper 20)](QCBpaper20.html) to see notes.
 
-
-
+* Please click on [Maximum entropy models for antibody diversity (QCB 515 paper 21)](QCBpaper21.html) to see notes.
 
 
 
