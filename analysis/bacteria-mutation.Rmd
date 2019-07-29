@@ -14,6 +14,8 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+- Estimated reading time: 5-6 hrs
+
 ## Hypotheses
 
 * Hypothesis 1: (mutation) There is finite probability for any bacterium to mutate during its life time from "sensitive" to "resistant". i.e. The original variants were resistant before the virus was added. ("original variants" mean those bacteria which survive immediately after the virus has been added).
