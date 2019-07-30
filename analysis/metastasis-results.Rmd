@@ -14,6 +14,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+- Estimated reading time: 1-2 hrs
+
+- Question: Looking at Fig 1 (which describes the experiment blueprint), I don't understand: what is the difference with experiement on B16 colony and on clones of B16. Why is that directing to the conclusion that metastatic potential preexisted???
+
 ## Goal
 
 In this study, they investigate whether those unique metastasis cells preexistsed in the tumor cell population, or whether they arose during metastasis by a process of adaptation to local environmental conditions. (accompanied by luria's bacteria-mutation paper)
@@ -28,7 +32,7 @@ In this study, they investigate whether those unique metastasis cells preexistse
 
 ## Reasoning (do not understand)
 
-* If the cloned sublines gave rise to widely different numbers of lung colonies, this suggests that the parent tumor was heterogeneous and that cells of both high and low matastatic potential preexisted in the parent popultion.
+* If the cloned sublines gave rise to widely different numbers of lung colonies, this suggests that the parent tumor was heterogeneous and that cells of both high and low metastatic potential preexisted in the parent popultion.
 
 ## Conclusion
 
