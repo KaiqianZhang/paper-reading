@@ -66,6 +66,9 @@ This is my website for notes on paper reading.
 
 * Please click on [Maximum entropy models for antibody diversity (QCB 515 paper 21)](QCBpaper21.html) to see notes.
 
+* Please click on [Theory of threshold fluctuations in nerves (QCB 515 paper 23)](QCBpaper23.html) to see notes.
+
+
 
 
 ## Barbara Engelhardt paper reading

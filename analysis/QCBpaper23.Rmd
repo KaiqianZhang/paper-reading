@@ -1,0 +1,21 @@
+---
+title: "Theory of threshold fluctuations in nerves"
+author: "Kaiqian Zhang"
+date: "7/30/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- Estimated reading time: 3.5 - 4 hrs
+
+- Caveat: It has too many equations and do not get the chance to derive most of them. 
+
+- Goal: To establish the relation between threshold fluctuations and electrical noise. 
+
+- Method: Uses two-variable description of threshold fluctuations: $V\sigma$ approximation.
+
