@@ -28,7 +28,7 @@ This is my website for notes on paper reading.
 
 * Please click on [Metastasis results from preexisting variant cells within a malignant tumor (QCB 515 paper 2)](metastasis-results.html) to see notes.
 
-* Please click on [Enzyme induction as an all-or-none phenomenon](induction.html) to see notes.
+* Please click on [Enzyme induction as an all-or-none phenomenon (QCB 515 paper 3)](induction.html) to see notes.
 
 * Please click on [Optimality and evolutionary tuning of the expression level of a protein](optimality.html) to see notes.
 
