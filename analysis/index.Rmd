@@ -30,7 +30,7 @@ This is my website for notes on paper reading.
 
 * Please click on [Enzyme induction as an all-or-none phenomenon (QCB 515 paper 3)](induction.html) to see notes.
 
-* Please click on [Optimality and evolutionary tuning of the expression level of a protein](optimality.html) to see notes.
+* Please click on [Optimality and evolutionary tuning of the expression level of a protein (QCB 515 paper 4)](optimality.html) to see notes.
 
 * Please click on [Stochastic gene expression in a single cell](stochastic.html) to see notes.
 
@@ -68,7 +68,7 @@ This is my website for notes on paper reading.
 
 * Please click on [Theory of threshold fluctuations in nerves (QCB 515 paper 23)](QCBpaper23.html) to see notes.
 
-
+* Please click on [A simple coding procedure enhances a neuron's information capacity (QCB 515 paper 24)](QCBpaper24.html) to see notes. 
 
 
 ## Barbara Engelhardt paper reading

@@ -1,0 +1,28 @@
+---
+title: "A simple coding procedure enhances a neuron's information capacity"
+author: "Kaiqian Zhang"
+date: "8/5/2019"
+output: 
+  workflowr::wflow_html:
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- Estimated reading time: 45 mins - 1 hr
+
+## Keypoint
+
+- Contrast response functions (CRFs) describe how a neuron’s firing rate depends on the contrast, or intensity, of a visual stimulus.  x-axis is contrast and y-axis is response. Shape of this function: sigmoid. 
+
+- Goal: want to code the response states
+
+- Solution: use cumulative probablity distribution of contrast.
+
+- Verify experiment target: first order interneurons of the blowfly’s compound eye.
+
+- And show that: The light adapted contrast-response function approximates to the sigmoidal form of the cumulative  probability function for contrast levels in natural scenes,
+
+
