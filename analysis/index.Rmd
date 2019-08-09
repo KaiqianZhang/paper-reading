@@ -32,9 +32,9 @@ This is my website for notes on paper reading.
 
 * Please click on [Optimality and evolutionary tuning of the expression level of a protein (QCB 515 paper 4)](optimality.html) to see notes.
 
-* Please click on [Stochastic gene expression in a single cell](stochastic.html) to see notes.
+* Please click on [Stochastic gene expression in a single cell (QCB 515 paper 5)](stochastic.html) to see notes.
 
-* Please click on [Noise in gene expression determines cell fate in Bacillus subtilis](noise-fate.html) to see notes.
+* Please click on [Noise in gene expression determines cell fate in Bacillus subtilis (QCB 515 paper 6)](noise-fate.html) to see notes.
 
 * Please click on [An amplified sensitivity arising from covalent modification in biological systems](ultrasensitivity.html) to see notes.
 
