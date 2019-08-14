@@ -36,6 +36,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 
 
+
+
+
+
+
+
+
+
+
 ## scRNA-seq
 
 ### `netNMF-sc`
@@ -60,18 +69,52 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Paper name: GT-TS: Experimental design for maximizing cell type discovery in single-cell data (2018)
 
-- Keywords: cell type discovery, 
+- Keywords: cell type discovery
 
 - GT-TS estimates how many cells are required for sampling from each tissue with the goal of maximizing cell type discovery
 across samples from multiple iterations.
 
 
-###
+### `tGPLVM` :>
 
 - Paper name: A robust nonlinear low-dimensional manifold for single cell RNA-seq data (2018)
 
+- Keywords: cell type discovery, dimension reduction, Manifold Learning, Gaussian Process Latent Variable Model
 
-## Time Series
+
+### `BIISQ` :>
+
+- Paper name: Bayesian nonparametric discovery of isoforms and individual specific quantification (2018 Nature Communications)
+
+- Keywords: isoform discovery from short-read RNA seq dara, stochastic variational inference
+
+
+
+
+
+
+
+## Association/QT studies
+
+### `BTH` :>
+
+- Paper name: Statistical tests for detecting variance effects in quantitative trait studies (2018 Bioinformatics)
+
+- Keywords: Bayesian heteroskedastic linear regression model, identify variance effect of the quantitative trait
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Network inference
 
 ### `BETS`
 
@@ -84,9 +127,6 @@ across samples from multiple iterations.
 - Transcriptional time series data (GTEx v6).
 
 
-### 
-
-- Paper name: Sparse Multi-Output Gaussian Processes for Medical Time Series Prediction (2018)
 
 
 
@@ -123,6 +163,28 @@ across samples from multiple iterations.
 
 - Application/problem: recover patient-specific response to the administration of three common drugs: one antihypertensive drug and two anticoagulants.
 
+### `MedGP`
+
+- Paper name: Sparse Multi-Output Gaussian Processes for Medical Time Series Prediction (2018)
+
+- Keywords: ICU data, Gaussian process regression, online prediction
+
+### `DPGP`
+
+- Paper name: Clustering gene expression time series data using an infinite Gaussian process mixture model (2018)
+
+- Keywords: clustering genes, Dirichlet processes, Gaussian processes
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -136,14 +198,13 @@ across samples from multiple iterations.
     
     - Confounders are hard to control in high-dimensional data. 
     
-- 2. 
-    
-    
-    
-    
-    
+- 2. Cell type discovery/ Single cell RNA seq analysis
 
-- 
+
+    
+    
+    
+  
 
 
 
