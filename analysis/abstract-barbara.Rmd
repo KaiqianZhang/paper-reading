@@ -9,22 +9,141 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
+## CCA
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+### `Deep Probablistic CCA` :>
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+- Paper name: End-to-end training of deep probabilistic CCA for joint modeling of paired biomedical observations (2019)
 
-```{r cars}
-summary(cars)
-```
+- Keywords: PCCA, deep learning, paired biomedical observations
 
-## Including Plots
+- We hypothesize that end-to-end training will learn features that are good for both reconstruction and joint modeling.
 
-You can also embed plots, for example:
+- “interpretability” is a broad concept [23], here we mean specifically that we can identify small subsets of genes that are associated with specific image features.
 
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
+- Being Bayesian, this means we want a sparse prior. :)
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+- Our scientific aim is to use this generative model on a number of downstream tasks such as annotating histology slides with predicted gene expression levels and analyzing clusters that capture shared structure in our paired data.
+
+
+### `ImageCCA`
+
+- Paper name: Joint analysis of gene expression levels and histological images identifies genes associated with tissue morphology (2019)
+
+- Use convolutional autoencoders and sparse canonical correlation analysis (CCA).
+
+- Suggests that genetic variation regulates population variation in tissue morphological traits.
+
+
+
+## scRNA-seq
+
+### `netNMF-sc`
+
+- Paper name: netNMF-sc: Leveraging gene-gene interactions for imputation and dimensionality reduction in single-cell expression analysis (2019)
+
+- Keywords: Single-cell RNA seq, NMF, regularized network 
+
+- `netNMF-sc` combines network-regularized non-negative matrix factorization with a procedure for handling zero inflation in transcript count matrices.
+
+### `scGene-Fit`
+
+- Paper name: Optimal marker gene selection for cell type discrimination in single cell analyses (2019)
+
+- Keywords: cell type discovery
+
+- Goal: to select a small set of informative markers to identify and differentiate specific cell types or cell states as precisely as possible. 
+
+- Uses label-aware compressive classification methods.
+
+### `GT-TS` :>
+
+- Paper name: GT-TS: Experimental design for maximizing cell type discovery in single-cell data (2018)
+
+- Keywords: cell type discovery, 
+
+- GT-TS estimates how many cells are required for sampling from each tissue with the goal of maximizing cell type discovery
+across samples from multiple iterations.
+
+
+###
+
+- Paper name: A robust nonlinear low-dimensional manifold for single cell RNA-seq data (2018)
+
+
+## Time Series
+
+### `BETS`
+
+- Paper name: Causal Network Inference from Gene Transcriptional Time Series Response to Glucocorticoids (2019)
+
+- Keywords: network inference
+
+- BETS uses elastic net regression and stability selection from bootstrapped samples to infer causal relationships among genes.
+
+- Transcriptional time series data (GTEx v6).
+
+
+### 
+
+- Paper name: Sparse Multi-Output Gaussian Processes for Medical Time Series Prediction (2018)
+
+
+
+
+## Reinforcement learning
+
+### Reinforcement learning for ICU data
+
+- Paper name: An Optimal Policy for Patient Laboratory Tests in Intensive Care Units (2019)
+
+- Keywords: Reinforcement Learning, Dynamic Treatment Regimes, Pareto Learning
+
+
+### RL with admissible rewards
+
+- Paper name: Defining Admissible Rewards for High Confidence Policy Evaluation (2019)
+
+- Goal: 
+
+    - develop a method to identify an admissible set of reward functions. 
+
+    - to learn a policy for weaning patients from mechanical ventilation.
+
+
+
+## Gaussian Process
+### `GP-LFM`
+
+- Paper name: Patient-Specific Effects of Medication Using Latent Force Models with Gaussian Processes (2019)
+
+- Goal: model the physiological states of patients in medical time series data.
+
+- Uses: Gaussian process and latent force model
+
+- Application/problem: recover patient-specific response to the administration of three common drugs: one antihypertensive drug and two anticoagulants.
+
+
+
+
+
+
+## Main problems want to solve
+
+- 1. Associate histological image phenotypes with high-dimensional genomic markers.
+
+    - Image features are hard to identify.
+    
+    - Confounders are hard to control in high-dimensional data. 
+    
+- 2. 
+    
+    
+    
+    
+    
+
+- 
+
+
+
