@@ -436,7 +436,7 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2019-08-11
+<strong>Last updated:</strong> 2019-08-14
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -527,10 +527,10 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree125df985cde1fc70a71d286f21013143d23510cetargetblank125df98a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/125df985cde1fc70a71d286f21013143d23510ce" target="_blank">125df98</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreecfab6588f9afc9b9dcb95022084ffc72c63bb1e4targetblankcfab658a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/cfab6588f9afc9b9dcb95022084ffc72c63bb1e4" target="_blank">cfab658</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree125df985cde1fc70a71d286f21013143d23510cetargetblank125df98a" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreecfab6588f9afc9b9dcb95022084ffc72c63bb1e4targetblankcfab658a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -543,10 +543,10 @@ Ignored files:
 
 Untracked files:
     Untracked:  analysis/QCBpaper17.Rmd
-    Untracked:  docs/figure/
 
 Unstaged changes:
     Modified:   analysis/QCBpaper20.Rmd
+    Modified:   analysis/abstract-John.Rmd
     Modified:   analysis/basenji.Rmd
     Modified:   analysis/basset.Rmd
     Modified:   analysis/noise-fate.Rmd
@@ -593,6 +593,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/cfab6588f9afc9b9dcb95022084ffc72c63bb1e4/analysis/abstract-barbara.Rmd" target="_blank">cfab658</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-08-14
+</td>
+<td>
+update barbara notes.
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/2127eaf99b2736df1871caec3c99759cc7c762b4/docs/abstract-barbara.html" target="_blank">2127eaf</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-08-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/KaiqianZhang/paper-reading/blob/125df985cde1fc70a71d286f21013143d23510ce/analysis/abstract-barbara.Rmd" target="_blank">125df98</a>
 </td>
 <td>
@@ -612,24 +646,128 @@ abstracts
 </div>
 </div>
 </div>
-<div id="r-markdown" class="section level2">
-<h2>R Markdown</h2>
-<p>This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <a href="http://rmarkdown.rstudio.com" class="uri">http://rmarkdown.rstudio.com</a>.</p>
-<p>When you click the <strong>Knit</strong> button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</p>
-<pre class="r"><code>summary(cars)</code></pre>
-<pre><code>     speed           dist       
- Min.   : 4.0   Min.   :  2.00  
- 1st Qu.:12.0   1st Qu.: 26.00  
- Median :15.0   Median : 36.00  
- Mean   :15.4   Mean   : 42.98  
- 3rd Qu.:19.0   3rd Qu.: 56.00  
- Max.   :25.0   Max.   :120.00  </code></pre>
+<div id="cca" class="section level2">
+<h2>CCA</h2>
+<div id="deep-probablistic-cca" class="section level3">
+<h3><code>Deep Probablistic CCA</code> :&gt;</h3>
+<ul>
+<li><p>Paper name: End-to-end training of deep probabilistic CCA for joint modeling of paired biomedical observations (2019)</p></li>
+<li><p>Keywords: PCCA, deep learning, paired biomedical observations</p></li>
+<li><p>We hypothesize that end-to-end training will learn features that are good for both reconstruction and joint modeling.</p></li>
+<li><p>“interpretability” is a broad concept [23], here we mean specifically that we can identify small subsets of genes that are associated with specific image features.</p></li>
+<li><p>Being Bayesian, this means we want a sparse prior. :)</p></li>
+<li><p>Our scientific aim is to use this generative model on a number of downstream tasks such as annotating histology slides with predicted gene expression levels and analyzing clusters that capture shared structure in our paired data.</p></li>
+</ul>
 </div>
-<div id="including-plots" class="section level2">
-<h2>Including Plots</h2>
-<p>You can also embed plots, for example:</p>
-<p><img src="figure/abstract-barbara.Rmd/pressure-1.png" width="672" style="display: block; margin: auto;" /></p>
-<p>Note that the <code>echo = FALSE</code> parameter was added to the code chunk to prevent printing of the R code that generated the plot.</p>
+<div id="imagecca" class="section level3">
+<h3><code>ImageCCA</code></h3>
+<ul>
+<li><p>Paper name: Joint analysis of gene expression levels and histological images identifies genes associated with tissue morphology (2019)</p></li>
+<li><p>Use convolutional autoencoders and sparse canonical correlation analysis (CCA).</p></li>
+<li><p>Suggests that genetic variation regulates population variation in tissue morphological traits.</p></li>
+</ul>
+</div>
+</div>
+<div id="scrna-seq" class="section level2">
+<h2>scRNA-seq</h2>
+<div id="netnmf-sc" class="section level3">
+<h3><code>netNMF-sc</code></h3>
+<ul>
+<li><p>Paper name: netNMF-sc: Leveraging gene-gene interactions for imputation and dimensionality reduction in single-cell expression analysis (2019)</p></li>
+<li><p>Keywords: Single-cell RNA seq, NMF, regularized network</p></li>
+<li><p><code>netNMF-sc</code> combines network-regularized non-negative matrix factorization with a procedure for handling zero inflation in transcript count matrices.</p></li>
+</ul>
+</div>
+<div id="scgene-fit" class="section level3">
+<h3><code>scGene-Fit</code></h3>
+<ul>
+<li><p>Paper name: Optimal marker gene selection for cell type discrimination in single cell analyses (2019)</p></li>
+<li><p>Keywords: cell type discovery</p></li>
+<li><p>Goal: to select a small set of informative markers to identify and differentiate specific cell types or cell states as precisely as possible.</p></li>
+<li><p>Uses label-aware compressive classification methods.</p></li>
+</ul>
+</div>
+<div id="gt-ts" class="section level3">
+<h3><code>GT-TS</code> :&gt;</h3>
+<ul>
+<li><p>Paper name: GT-TS: Experimental design for maximizing cell type discovery in single-cell data (2018)</p></li>
+<li><p>Keywords: cell type discovery,</p></li>
+<li><p>GT-TS estimates how many cells are required for sampling from each tissue with the goal of maximizing cell type discovery across samples from multiple iterations.</p></li>
+</ul>
+</div>
+<div id="section" class="section level3">
+<h3></h3>
+<ul>
+<li>Paper name: A robust nonlinear low-dimensional manifold for single cell RNA-seq data (2018)</li>
+</ul>
+</div>
+</div>
+<div id="time-series" class="section level2">
+<h2>Time Series</h2>
+<div id="bets" class="section level3">
+<h3><code>BETS</code></h3>
+<ul>
+<li><p>Paper name: Causal Network Inference from Gene Transcriptional Time Series Response to Glucocorticoids (2019)</p></li>
+<li><p>Keywords: network inference</p></li>
+<li><p>BETS uses elastic net regression and stability selection from bootstrapped samples to infer causal relationships among genes.</p></li>
+<li><p>Transcriptional time series data (GTEx v6).</p></li>
+</ul>
+</div>
+<div id="section-1" class="section level3">
+<h3></h3>
+<ul>
+<li>Paper name: Sparse Multi-Output Gaussian Processes for Medical Time Series Prediction (2018)</li>
+</ul>
+</div>
+</div>
+<div id="reinforcement-learning" class="section level2">
+<h2>Reinforcement learning</h2>
+<div id="reinforcement-learning-for-icu-data" class="section level3">
+<h3>Reinforcement learning for ICU data</h3>
+<ul>
+<li><p>Paper name: An Optimal Policy for Patient Laboratory Tests in Intensive Care Units (2019)</p></li>
+<li><p>Keywords: Reinforcement Learning, Dynamic Treatment Regimes, Pareto Learning</p></li>
+</ul>
+</div>
+<div id="rl-with-admissible-rewards" class="section level3">
+<h3>RL with admissible rewards</h3>
+<ul>
+<li><p>Paper name: Defining Admissible Rewards for High Confidence Policy Evaluation (2019)</p></li>
+<li><p>Goal:</p>
+<ul>
+<li><p>develop a method to identify an admissible set of reward functions.</p></li>
+<li><p>to learn a policy for weaning patients from mechanical ventilation.</p></li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="gaussian-process" class="section level2">
+<h2>Gaussian Process</h2>
+<div id="gp-lfm" class="section level3">
+<h3><code>GP-LFM</code></h3>
+<ul>
+<li><p>Paper name: Patient-Specific Effects of Medication Using Latent Force Models with Gaussian Processes (2019)</p></li>
+<li><p>Goal: model the physiological states of patients in medical time series data.</p></li>
+<li><p>Uses: Gaussian process and latent force model</p></li>
+<li><p>Application/problem: recover patient-specific response to the administration of three common drugs: one antihypertensive drug and two anticoagulants.</p></li>
+</ul>
+</div>
+</div>
+<div id="main-problems-want-to-solve" class="section level2">
+<h2>Main problems want to solve</h2>
+<ul>
+<li><ol style="list-style-type: decimal">
+<li>Associate histological image phenotypes with high-dimensional genomic markers.</li>
+</ol>
+<ul>
+<li><p>Image features are hard to identify.</p></li>
+<li><p>Confounders are hard to control in high-dimensional data.</p></li>
+</ul></li>
+<li><ol start="2" style="list-style-type: decimal">
+<li></li>
+</ol></li>
+<li></li>
+</ul>
 <br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
