@@ -102,16 +102,11 @@ across samples from multiple iterations.
 
 - Keywords: Bayesian heteroskedastic linear regression model, identify variance effect of the quantitative trait
 
+### Dimension reduction :>
 
+- Paper name: Adaptive Randomized Dimension Reduction on Massive Data (2017)
 
-
-
-
-
-
-
-
-
+- Keywords: randomized dimension reduction, PCA, linear mixed models
 
 
 ## Network inference
@@ -125,10 +120,6 @@ across samples from multiple iterations.
 - BETS uses elastic net regression and stability selection from bootstrapped samples to infer causal relationships among genes.
 
 - Transcriptional time series data (GTEx v6).
-
-
-
-
 
 
 ## Reinforcement learning
@@ -175,6 +166,26 @@ across samples from multiple iterations.
 
 - Keywords: clustering genes, Dirichlet processes, Gaussian processes
 
+
+## Variational inference related
+
+### `MELD` :>
+
+- Paper name: Fast Moment Estimation for Generalized Latent Dirichlet Models (2017)
+
+- Keywords: latent Dirichlet, generalized method of moments, compare methods with EM, variational inference, and MCMC
+
+### `DCPF`
+
+- Paper name: Dynamic Collaborative Filtering With Compound Poisson Factorization (2017)
+
+- Keywords: ratings data, matrix factorization, variational inference
+
+## Neuroscience
+
+### fMRI analysis :>
+
+- Paper name: Computational approaches to fMRI analysis (2017)
 
 
 
