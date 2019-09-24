@@ -13,9 +13,58 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Goal
+## Problem
 
-This study aimed to examine whether protein expression levels evolve towards optimal solutions of a cost-benefit problem.
+They are trying to figure out for each lactose environment, if there exists an optimal lac protein expression level that maximizes growth rate. They model the fitness by quantify growth burden and growth advantage, where they call cost and benefit. 
+
+## Experiments
+
+- "Dilution evolution experiments": 
+
+- Steps for cost and benefit: 
+
+    - experiemnt measurements 
+
+    - formulate functions to predict
+
+    - compare experiment measurements with predictions
+    
+- Measure cost: 
+
+    - At different concentration of IPTG, which induces lac system but no benefit is gained since IPTG is not metabolized.
+    
+    - Cost function is nonlinear and concave. increase in lac protein expression level, increase in cost.
+    
+
+- Measure benefit:
+
+    - At saturation IPTG for full induction, and at various concentration of sugar lactose.
+    
+    - Growth rate increases with lactose concentration, indicating that benefit gained by the action of the Lac proteins that transport and use this sugar.
+    
+    
+## Findings
+
+- The optimal protein level increases with the lactose level in the environment.
+
+- Changes in LacZ activity are proportional to changes in LacZ protein level.
+
+- Lactose level remains constant over most of exponential growth.
+
+- Protein expression in evolved cells relative to wild-type cells = relative change in lactose activity.
+
+
+## Simulation
+
+- The mutants eventually take over the population. The average LacZ expression of the population therefore approaches the expression level of the mutant.
+
+
+
+
+
+
+
+
 
 ## Details
 
@@ -46,17 +95,6 @@ This study aimed to examine whether protein expression levels evolve towards opt
 #### findings
 
 - changes in LacZ activity were proportional to changes in LacZ protein level.
-
-
-
-
-
-
-
-
-
-
-
 
 ## Resource
 
