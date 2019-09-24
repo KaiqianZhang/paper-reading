@@ -13,6 +13,61 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Problem
+
+They are trying to understand at low induction concentration, how does individual bacteria make enzymes. They discovered that at low induction concentration, individual bacteria is either makeing enzyme at full rate or not making it at all.
+
+
+## How they perform the experiment?
+
+
+### Single bactria experiment
+
+A single bactrium is transferred a test tube containing a maintenance concentration of inducer, and are grown to a population size of $10^8$ to permit convinient assay of enzyme content. So the enzyme level will be maximal if the bacterium is preinduced, and very low if not preinduced.
+
+### Distribution experiments
+
+Did not understand
+
+## Details in the experiments
+
+- TMG: They use TMG as an inducer. 
+
+- "Gratuitous" condition: means induction without increasing growth rate.
+
+- "galactoside permease": a second enzyme that can transport inducer from medium into the bacterium.
+
+- "intermediate saturation": 
+
+- Slope $K$: the rate of induction.
+
+## Findings
+
+- There is an initial linear rise in the proportion of fully induced bacteria because a constant fraction of the uninduced bacteria get their first permease molecule in each unit of time.
+
+- Induced bacteria grow more slowly than uninduced. That is why we have intermediate saturation.
+
+- At low inducer concentration, the rate of induction depends on CO2 concentration.
+
+- An increase in inducer concentration will increase the slope $K$ (the rate of induction), and also increase the ultimate saturation value.
+
+- If preinduced bacteria are transferred to medium with no inducer, enzyme synthesis ceases immediately.
+
+- Under gratuitous conditions of induction, and at high inducer concentration, there is a uniform distribution of enzyme among bacteria.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - Estimated reading time: 3-4 hrs
 
 ## Components
