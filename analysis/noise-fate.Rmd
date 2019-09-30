@@ -19,11 +19,86 @@ knitr::opts_chunk$set(echo = TRUE)
 
 - Bacillus subtilis (strain): soil bacterium, which can perform DNA uptake (i.e. incorporate new genetic material) when it is in the "competent" state.
 
-- ComK (gene): 1. regulation of genetic competence and DNA uptake; 2. is subjected to the positive autoregulatory loop; 3. represses the transcrption of rok.
+- ComK: the protein that regulates competence for DNA uptake.
+
+- comK (gene): 1. regulation of genetic competence and DNA uptake; 2. is subjected to the positive autoregulatory loop; 3. represses the transcrption of rok.
 
 - T0: the onset of stationary phase.
 
 - T2: two hours after T0, transitions to compentence cease to occur and 15% of the cells remain competent.
+
+## Background
+
+- Bistability: two states
+
+  * non-competent state: the positive autoregulatory loop is not activated, comK expression is low.
+  
+  * competent state: when the level of protein ComK exceeds a critical threshold, the loop is activated, and the comK expression is high.
+  
+## Goal
+
+They are trying to figure out (1) why cells only transition to competence for a limited duration of time. (2) the source of the fluctuation that actuate ComK feedback loop.
+
+## General experiment
+
+They use wild-type strain. They use flurescence to count comK mRNA molecules in single cells. And they find that the mean number of comK mRNA molecules increased from 0.7 to 1 molecules per cell at $T_0$ while declined to 0.3 molecules per cell at $T_2$. 
+  
+## Question 1: Why cells only transition to competent state for ~2 hrs during stationary phase?
+
+- hypothesis: In early stationary stage, when the average mRNA level is elevated, the probability of transition is high because of the increased likelihood of generating enough ComK to activate the positive feedback loop. Later, when the average is low, the probability of such an accumulation is smaller.
+
+- experiment: use a strain that cannot sythesize Rok, transcriptional repressor of comK. count comK mRNA molecules. 
+
+- experiment finding: when we inactivate rok (i.e. we are not repressing comK transcription), the average number of comK mRNA molecules was twice as that in the WT strain.
+
+- experiment implication: the increased rate of transition is due to the increased rate of comK transcription.
+
+## Question 2: if the increased rate of transition is due to the increased basal rate of comK transcription or positive feedback at the comK promoter. 
+
+- experiment: use a strain lacking a functional comK gene but instead having the comK promoter drive a sequence comK-M2. 
+
+- experiment finding: the number of mRNA molecules is the same as that in the WT strain. 
+
+- experiment implication: the increased  rate of transition is due to the increased basal rate of comK transcription.
+
+## Question 3: whether a relatively small decrease in comK transcription can effectively end transitions to the competent state.
+
+- use some stochastic model to confirm this
+
+## Conclusion so far
+
+Above three experiments in all show that the decline in transcription of comK during stationary stage, which defines "window of opportunity", explains why cells are only able to transition to competence for a limited time.
+
+## Question 4: when selecting cells for competence, what is the role of noise in comK?
+
+- experiment: count the number of endogenous comK mRNA and comK-M2 mRNA.
+
+- experiment finding: uncorrelated variation implies that intrinsic noise might be the source of variations in ComK protein, leading to the initiation of competence.
+
+## Question 5: whether intrinsic noise is responsible for transitions to the competent state?
+
+- experiment: use rok strain, which has a twofold increase in comK mRNA transcription over the WT strain at $T_0$, thus decreasing
+the noise in ComK protein levels. Also adjust the mean ComK protein level.
+
+- experiment finding: the number of its competent cells at $T_2$ was dramatically lower than that in the WT strain. 
+
+- experiment implication: intrinsic noise in the comK expression is responsible for the transitions to competence and reduction in noise leads to fewer transition to competence. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
