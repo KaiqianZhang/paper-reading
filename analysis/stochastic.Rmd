@@ -14,6 +14,76 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Main
+
+Noise in gene expression usually causes cell-cell variation. Noise has two components: intrinsic and extrinsic noise. These noise can be transcription rate, regulatory dynamics, and genetic factors. The paper established a quantitative foundation for modeling noise in genetic network.  
+
+## Definition
+
+- `plasmid`: A plasmid is a small DNA molecule within a cell that is physically separated from chromosomal DNA and can replicate independently. 
+
+- `lacI`: a repressor gene. lactose operon repressor; negative regulation of transcription
+
+- `IPTG`: binds and inactivates the lac repressor.
+
+- `Repressilator`: synthetic oscillatory network. It causes periodic synthesis of LacI, which repeatedly turns both promoters on and off. 
+
+- `recA`: a gene. Lack of this gene will increase noise. 
+
+- `CFP` or `YFP`: two reporter genes.
+
+## Experiment 
+
+- experiment process: build E coli with two fluorecent genes (construct plasmids with CFP or YFP), cells were grwon in LB medium, photographed, computer performed image analysis and quantify fluorescent intensities. Calculate noise by their definition using intensities (in Supplements). 
+
+plot CFP and YFP intensities and then obtain noise orthogonally as in Figure 3A (how to measure noise).
+
+- `lacI-` strain: low noise levels. 
+    
+    * similar results in another strain incorporating two copies of somewhat stronger promoters.
+    
+    * low noise state does not strictly depend on a particular promoter sequence.
+    
+- `lacI+` or `WT` strain: high noise level, increase by a factor of 5
+
+- `WT` + `IPTG`: decrease the noise level, indicating the effect is reversible. 
+
+- Because of this reversibility, we can conclude that the noise increase found in `WT` strains can be attributed diretly to the activity of LacI and the corresponding reduction in transcription rate. 
+
+- fact: fluorecsent intensity is proportional to average number of transcripts
+
+- `lacI-` + `Repressilator`: substantial increase in intrinsic noise and total noise
+    
+    * to understand the interplay between regulatory dynamics and noise
+    
+    * conclude that regulatory dynamics can cause substantial changes in noise level
+    
+- anything with `delta recA` will increase noise. What does `delta recA` mean? without recA gene??
+
+
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Goal
 
 Since the amount of protein produced by a particular gene varies from cell to cell, there exists stochastic gene expression in a single cell. 
