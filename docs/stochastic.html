@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Kaiqian Zhang" />
@@ -88,7 +89,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -249,56 +249,12 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 <style type="text/css">
 .code-folding-btn { margin-bottom: 4px; }
 </style>
-<script>
-$(document).ready(function () {
-  window.initializeCodeFolding("hide" === "show");
-});
-</script>
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -347,8 +303,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -446,7 +400,7 @@ div.section {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#report"> Report <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -455,21 +409,21 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2019-04-03
+<strong>Last updated:</strong> 2019-10-01
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>paper-reading/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.2.0). The <em>Report</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.4.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
-<div id="report" class="tab-pane fade">
+<div id="checks" class="tab-pane fade">
 <div id="workflowr-checks" class="panel-group">
 <div class="panel panel-default">
 <div class="panel-heading">
@@ -534,10 +488,22 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreece3b8bd3216026e5b09cd127905db9f01aa082b5targetblankce3b8bda"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/ce3b8bd3216026e5b09cd127905db9f01aa082b5" target="_blank">ce3b8bd</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreece3b8bd3216026e5b09cd127905db9f01aa082b5targetblankce3b8bda" class="panel-collapse collapse">
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree6797c8f2fbe7a0f9566b376af92a4e7016c60406targetblank6797c8fa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/6797c8f2fbe7a0f9566b376af92a4e7016c60406" target="_blank">6797c8f</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtree6797c8f2fbe7a0f9566b376af92a4e7016c60406targetblank6797c8fa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -548,8 +514,17 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
+Untracked files:
+    Untracked:  analysis/QCBpaper17.Rmd
+    Untracked:  analysis/variational-autoencoder.Rmd
+
 Unstaged changes:
+    Modified:   analysis/QCBpaper20.Rmd
+    Modified:   analysis/abstract-John.Rmd
+    Modified:   analysis/abstract-barbara.Rmd
+    Modified:   analysis/basenji.Rmd
     Modified:   analysis/basset.Rmd
+    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -588,6 +563,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/6797c8f2fbe7a0f9566b376af92a4e7016c60406/analysis/stochastic.Rmd" target="_blank">6797c8f</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-10-01
+</td>
+<td>
+update notes for class 3
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/0296d26f664d1b710cacbd9288c68cddde0a31a5/docs/stochastic.html" target="_blank">0296d26</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-04-03
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -646,6 +655,45 @@ start paper 5 stocahstic gene expression reading
 </div>
 </div>
 </div>
+<div id="main" class="section level2">
+<h2>Main</h2>
+<p>Noise in gene expression usually causes cell-cell variation. Noise has two components: intrinsic and extrinsic noise. These noise can be transcription rate, regulatory dynamics, and genetic factors. The paper established a quantitative foundation for modeling noise in genetic network.</p>
+</div>
+<div id="definition" class="section level2">
+<h2>Definition</h2>
+<ul>
+<li><p><code>plasmid</code>: A plasmid is a small DNA molecule within a cell that is physically separated from chromosomal DNA and can replicate independently.</p></li>
+<li><p><code>lacI</code>: a repressor gene. lactose operon repressor; negative regulation of transcription</p></li>
+<li><p><code>IPTG</code>: binds and inactivates the lac repressor.</p></li>
+<li><p><code>Repressilator</code>: synthetic oscillatory network. It causes periodic synthesis of LacI, which repeatedly turns both promoters on and off.</p></li>
+<li><p><code>recA</code>: a gene. Lack of this gene will increase noise.</p></li>
+<li><p><code>CFP</code> or <code>YFP</code>: two reporter genes.</p></li>
+</ul>
+</div>
+<div id="experiment" class="section level2">
+<h2>Experiment</h2>
+<ul>
+<li>experiment process: build E coli with two fluorecent genes (construct plasmids with CFP or YFP), cells were grwon in LB medium, photographed, computer performed image analysis and quantify fluorescent intensities. Calculate noise by their definition using intensities (in Supplements).</li>
+</ul>
+<p>plot CFP and YFP intensities and then obtain noise orthogonally as in Figure 3A (how to measure noise).</p>
+<ul>
+<li><p><code>lacI-</code> strain: low noise levels.</p>
+<ul>
+<li><p>similar results in another strain incorporating two copies of somewhat stronger promoters.</p></li>
+<li><p>low noise state does not strictly depend on a particular promoter sequence.</p></li>
+</ul></li>
+<li><p><code>lacI+</code> or <code>WT</code> strain: high noise level, increase by a factor of 5</p></li>
+<li><p><code>WT</code> + <code>IPTG</code>: decrease the noise level, indicating the effect is reversible.</p></li>
+<li><p>Because of this reversibility, we can conclude that the noise increase found in <code>WT</code> strains can be attributed diretly to the activity of LacI and the corresponding reduction in transcription rate.</p></li>
+<li><p>fact: fluorecsent intensity is proportional to average number of transcripts</p></li>
+<li><p><code>lacI-</code> + <code>Repressilator</code>: substantial increase in intrinsic noise and total noise</p>
+<ul>
+<li><p>to understand the interplay between regulatory dynamics and noise</p></li>
+<li><p>conclude that regulatory dynamics can cause substantial changes in noise level</p></li>
+</ul></li>
+<li><p>anything with <code>delta recA</code> will increase noise. What does <code>delta recA</code> mean? without recA gene??</p></li>
+</ul>
+</div>
 <div id="goal" class="section level2">
 <h2>Goal</h2>
 <p>Since the amount of protein produced by a particular gene varies from cell to cell, there exists stochastic gene expression in a single cell.</p>
@@ -683,7 +731,7 @@ start paper 5 stocahstic gene expression reading
 <div id="supplementary" class="section level2">
 <h2>Supplementary</h2>
 <p>not fully understand…</p>
-<br> <br>
+<br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
@@ -691,13 +739,13 @@ start paper 5 stocahstic gene expression reading
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>R version 3.5.3 (2019-03-11)
+<pre><code>R version 3.6.0 (2019-04-26)
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
-Running under: macOS Sierra 10.12.6
+Running under: macOS Mojave 10.14.5
 
 Matrix products: default
-BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+BLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
 
 locale:
 [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -706,11 +754,11 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 loaded via a namespace (and not attached):
- [1] workflowr_1.2.0 Rcpp_1.0.1      digest_0.6.18   rprojroot_1.3-2
- [5] backports_1.1.3 git2r_0.25.2    magrittr_1.5    evaluate_0.13  
- [9] stringi_1.4.3   fs_1.2.7        whisker_0.3-2   rmarkdown_1.12 
-[13] tools_3.5.3     stringr_1.4.0   glue_1.3.1      xfun_0.5       
-[17] yaml_2.2.0      compiler_3.5.3  htmltools_0.3.6 knitr_1.22     </code></pre>
+ [1] workflowr_1.4.0 Rcpp_1.0.2      digest_0.6.21   rprojroot_1.3-2
+ [5] backports_1.1.4 git2r_0.26.1    magrittr_1.5    evaluate_0.14  
+ [9] stringi_1.4.3   fs_1.3.1        whisker_0.4     rmarkdown_1.15 
+[13] tools_3.6.0     stringr_1.4.0   glue_1.3.1      xfun_0.9       
+[17] yaml_2.2.0      compiler_3.6.0  htmltools_0.3.6 knitr_1.25     </code></pre>
 </div>
 </div>
 
@@ -744,6 +792,54 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
