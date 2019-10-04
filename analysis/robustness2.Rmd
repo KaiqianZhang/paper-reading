@@ -9,6 +9,74 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Definition
+
+- `chemotaxis`: a well-characterized sensory system/network. This network governs the migration of bacteria towards chemical attractants and away from repellents by translating temporal changes in the level of chemical stimuli into a modulation of the cell's swimming direction. 
+
+    + one important feature: exact adaptation
+    
+- `exact adaptation`: a change in the concentration of a chemical stimulant induces a rapid change in the bacteria's tumbling frequency, which gradually adapts back precisely to its pre-stimulus value. 
+
+    + P: defined `the steady-state tumbling frequency of unstimulated cells` / `that of stimulated cells`
+    
+    
+- `CheR`: a key protein in the adaptation mechanism. A strain deleted for `cheR` did not tumble and could not adapt. 
+
+
+
+## Question/Goal
+
+Whether biochemical networks are robust? i.e. Are they sensitive to the precise values of the biochemical parameters? How sensitive exact adaptation in chemotaxis is to variations in the concentrations of proteins in the network.
+
+## Experiment 1 main
+
+- how they do? 
+
+    + systemalically vary the concentrations of the chemotaxis-network proteins 
+    
+    + cells were stimulated by addition of a saturating amount of attractant
+    
+    + measure tumbling frequency of stimulated and unstimulated cells, averaging over a population of swimming cells 
+    
+- what do they find?
+
+    + same exact adaptation for all attractants and repellents
+    
+## Experiment 2 with `CheR`
+
+- how they do?
+
+    + with different concentrations of `CheR` 
+    
+    + same procedure as in experiment 1 main
+    
+- what do they find?
+
+    + An increase in the concentration of `CheB` caused a decrease in tumbling frequency and an increase in adaptation time.
+    
+    + Exact adaptation was observed for all og these  perturbed networks.
+    
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 - key concept: [definition for `exact adaptation`]: a change in the concentration of a chemical stimulant induces a rapid change in the bacteria's tumbling frequency, which gradually adapts back precisely to its pre-stimulus value.
 
 - study object: protein network for chemotaxis
