@@ -1,5 +1,5 @@
 ---
-title: "Robustness in simple biochemical networks"
+title: "Robustness in simple biochemical networks (N. Barkai & S. Leibler)"
 author: "Kaiqian Zhang"
 date: "4/11/2019"
 output: html_document
@@ -9,9 +9,42 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
+## Definition
+
+- ligand:  a molecule that binds to another (usually large) molecule.
+
+
+
+
+
+## Two-state model of the bacterial chemotactic network
+
+- Given a simplified receptor complex `E`
+
+- This complex has two functional states: active & inactive
+
+- Output of the network: system activity `A`
+
+    + which is the average number of receptors in the active state.
+    
+    + determines the tumbling frequency.
+    
+    
+- Assumptions of the model:
+
+    + input: ligand concetration. The binding affinity of ligand is independent of the receptor's activity and its degree of methylation. 
+    
+    + `CheB` can only demethylate active receptors so that all active receptors are demethylated at the same rate.
+    
+    + The association rate constant for methylation depends only on the activity of the receptor, the dissociation rate constant annd the catalytic rate constant are the same for all forms of the receptor.
+    
+    
+- feed-back system: the output `A` determines the rates of modification reactions, which in turn determinne the slow changes in `A`. This is also called activity-dependent kinetics. With this kinetics, the value of the steady-state activity $A^{st}$, is independent of the ligand level. [Explains why adptation is robust.]
+
 ## Research question
 
-- whether cell network is sensitive or robust to variations in their biochemical parameters.
+- The key properties of biochemical networks should be robust in order to ensure their proper functioning.
 
 ## Mechanism
 
@@ -33,11 +66,15 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Findings
 
+- fact: methylation is responsible for the adaptation property: changes in methylation of the receptor can compensate for the effect of ligand on tumbling frequency.  
+
+- Fig 1b: Robust adaptationn is achieved when R works at saturation and B acts only on the active form of $E_m$. Note the rate of reverse modification is determined by the system's output and does not depend directly on the concentration of $E_m$.
+
 - Fig 2: When a typical model system is subject to a step-like change in attractant concentration, it is able to respond and to adapt to the imposed change. The adaptation is nearly perfect for all ligand concetrations.
 
 - Fig 3b: Robustness is thus a characteristic of specific network properties and not of the network as a whole: whereas some properties are robust, others can show sensitivity to changes in the network parameters, e.g. adaptation time, steady-state tumbling frequency.
 
-- These non-robust properties of the network show a strong correlation in their variation.
+- Fig 3c: These non-robust properties of the network show a strong correlation in their variation.
 
 - Adaptation property is observed in a large variety of populations.
 
