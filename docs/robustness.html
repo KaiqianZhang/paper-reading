@@ -7,12 +7,13 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Kaiqian Zhang" />
 
 
-<title>Robustness in simple biochemical networks</title>
+<title>Robustness in simple biochemical networks (N. Barkai &amp; S. Leibler)</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -87,7 +88,6 @@ code {
 }
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -248,48 +248,9 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
 
-
-<script>
-$(document).ready(function ()  {
-
-    // move toc-ignore selectors from section div to header
-    $('div.section.toc-ignore')
-        .removeClass('toc-ignore')
-        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
-
-    // establish options
-    var options = {
-      selectors: "h1,h2,h3",
-      theme: "bootstrap3",
-      context: '.toc-content',
-      hashGenerator: function (text) {
-        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
-      },
-      ignoreSelector: ".toc-ignore",
-      scrollTo: 0
-    };
-    options.showAndHide = true;
-    options.smoothScroll = true;
-
-    // tocify
-    var toc = $("#TOC").tocify(options).data("toc-tocify");
-});
-</script>
 
 <style type="text/css">
 
@@ -338,8 +299,6 @@ div.tocify {
 
 .tocify-subheader .tocify-item {
   font-size: 0.90em;
-  padding-left: 25px;
-  text-indent: 0;
 }
 
 .tocify .list-group-item {
@@ -411,7 +370,7 @@ div.section {
 
 
 
-<h1 class="title toc-ignore">Robustness in simple biochemical networks</h1>
+<h1 class="title toc-ignore">Robustness in simple biochemical networks (N. Barkai &amp; S. Leibler)</h1>
 <h4 class="author">Kaiqian Zhang</h4>
 <h4 class="date">4/11/2019</h4>
 
@@ -429,7 +388,7 @@ div.section {
 <a data-toggle="tab" href="#summary">Summary</a>
 </li>
 <li>
-<a data-toggle="tab" href="#report"> Report <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
+<a data-toggle="tab" href="#checks"> Checks <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> </a>
 </li>
 <li>
 <a data-toggle="tab" href="#versions">Past versions</a>
@@ -438,21 +397,21 @@ div.section {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2019-04-11
+<strong>Last updated:</strong> 2019-10-07
 </p>
 <p>
-<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 6 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
+<strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
 </p>
 <p>
 <strong>Knit directory:</strong> <code>paper-reading/</code> <span class="glyphicon glyphicon-question-sign" aria-hidden="true" title="This is the local directory in which the code in this file was executed."> </span>
 </p>
 <p>
 This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis was created with <a
-  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.2.0). The <em>Report</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
+  href="https://github.com/jdblischak/workflowr">workflowr</a> (version 1.4.0). The <em>Checks</em> tab describes the reproducibility checks that were applied when the results were created. The <em>Past versions</em> tab lists the development history.
 </p>
 <hr>
 </div>
-<div id="report" class="tab-pane fade">
+<div id="checks" class="tab-pane fade">
 <div id="workflowr-checks" class="panel-group">
 <div class="panel panel-default">
 <div class="panel-heading">
@@ -517,10 +476,22 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreecef8617f7677f3de342e3aab6d71c6806f84b0c9targetblankcef8617a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/cef8617f7677f3de342e3aab6d71c6806f84b0c9" target="_blank">cef8617</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongFilepathsstrongrelative"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>File paths:</strong> relative </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreecef8617f7677f3de342e3aab6d71c6806f84b0c9targetblankcef8617a" class="panel-collapse collapse">
+<div id="strongFilepathsstrongrelative" class="panel-collapse collapse">
+<div class="panel-body">
+<p>Great job! Using relative paths to the files within your workflowr project makes it easier to run your code on other machines.</p>
+</div>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<p class="panel-title">
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreeb42eb7dbb8de41fbb702bd10fa504a8c91f9df4etargetblankb42eb7da"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/KaiqianZhang/paper-reading/tree/b42eb7dbb8de41fbb702bd10fa504a8c91f9df4e" target="_blank">b42eb7d</a> </a>
+</p>
+</div>
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomKaiqianZhangpaperreadingtreeb42eb7dbb8de41fbb702bd10fa504a8c91f9df4etargetblankb42eb7da" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility. The version displayed above was the version of the Git repository at the time these results were generated. <br><br> Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -531,8 +502,17 @@ Ignored files:
     Ignored:    .Rhistory
     Ignored:    .Rproj.user/
 
+Untracked files:
+    Untracked:  analysis/QCBpaper17.Rmd
+    Untracked:  analysis/variational-autoencoder.Rmd
+
 Unstaged changes:
+    Modified:   analysis/QCBpaper20.Rmd
+    Modified:   analysis/abstract-John.Rmd
+    Modified:   analysis/abstract-barbara.Rmd
+    Modified:   analysis/basenji.Rmd
     Modified:   analysis/basset.Rmd
+    Modified:   analysis/index.Rmd
 
 </code></pre>
 <p>
@@ -576,6 +556,40 @@ Message
 Rmd
 </td>
 <td>
+<a href="https://github.com/KaiqianZhang/paper-reading/blob/b42eb7dbb8de41fbb702bd10fa504a8c91f9df4e/analysis/robustness.Rmd" target="_blank">b42eb7d</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-10-07
+</td>
+<td>
+update robustness
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/KaiqianZhang/paper-reading/81916db320bcc3b39a03063c2780cc776ac5f756/docs/robustness.html" target="_blank">81916db</a>
+</td>
+<td>
+kaiqian
+</td>
+<td>
+2019-04-11
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
+Rmd
+</td>
+<td>
 <a href="https://github.com/KaiqianZhang/paper-reading/blob/cef8617f7677f3de342e3aab6d71c6806f84b0c9/analysis/robustness.Rmd" target="_blank">cef8617</a>
 </td>
 <td>
@@ -595,10 +609,35 @@ finish notes for paper 8 robustness
 </div>
 </div>
 </div>
+<div id="definition" class="section level2">
+<h2>Definition</h2>
+<ul>
+<li>ligand: a molecule that binds to another (usually large) molecule.</li>
+</ul>
+</div>
+<div id="two-state-model-of-the-bacterial-chemotactic-network" class="section level2">
+<h2>Two-state model of the bacterial chemotactic network</h2>
+<ul>
+<li><p>Given a simplified receptor complex <code>E</code></p></li>
+<li><p>This complex has two functional states: active &amp; inactive</p></li>
+<li><p>Output of the network: system activity <code>A</code></p>
+<ul>
+<li><p>which is the average number of receptors in the active state.</p></li>
+<li><p>determines the tumbling frequency.</p></li>
+</ul></li>
+<li><p>Assumptions of the model:</p>
+<ul>
+<li><p>input: ligand concetration. The binding affinity of ligand is independent of the receptor’s activity and its degree of methylation.</p></li>
+<li><p><code>CheB</code> can only demethylate active receptors so that all active receptors are demethylated at the same rate.</p></li>
+<li><p>The association rate constant for methylation depends only on the activity of the receptor, the dissociation rate constant annd the catalytic rate constant are the same for all forms of the receptor.</p></li>
+</ul></li>
+<li><p>feed-back system: the output <code>A</code> determines the rates of modification reactions, which in turn determinne the slow changes in <code>A</code>. This is also called activity-dependent kinetics. With this kinetics, the value of the steady-state activity <span class="math inline">\(A^{st}\)</span>, is independent of the ligand level. [Explains why adptation is robust.]</p></li>
+</ul>
+</div>
 <div id="research-question" class="section level2">
 <h2>Research question</h2>
 <ul>
-<li>whether cell network is sensitive or robust to variations in their biochemical parameters.</li>
+<li>The key properties of biochemical networks should be robust in order to ensure their proper functioning.</li>
 </ul>
 </div>
 <div id="mechanism" class="section level2">
@@ -621,9 +660,11 @@ finish notes for paper 8 robustness
 <div id="findings" class="section level2">
 <h2>Findings</h2>
 <ul>
+<li><p>fact: methylation is responsible for the adaptation property: changes in methylation of the receptor can compensate for the effect of ligand on tumbling frequency.</p></li>
+<li><p>Fig 1b: Robust adaptationn is achieved when R works at saturation and B acts only on the active form of <span class="math inline">\(E_m\)</span>. Note the rate of reverse modification is determined by the system’s output and does not depend directly on the concentration of <span class="math inline">\(E_m\)</span>.</p></li>
 <li><p>Fig 2: When a typical model system is subject to a step-like change in attractant concentration, it is able to respond and to adapt to the imposed change. The adaptation is nearly perfect for all ligand concetrations.</p></li>
 <li><p>Fig 3b: Robustness is thus a characteristic of specific network properties and not of the network as a whole: whereas some properties are robust, others can show sensitivity to changes in the network parameters, e.g. adaptation time, steady-state tumbling frequency.</p></li>
-<li><p>These non-robust properties of the network show a strong correlation in their variation.</p></li>
+<li><p>Fig 3c: These non-robust properties of the network show a strong correlation in their variation.</p></li>
 <li><p>Adaptation property is observed in a large variety of populations.</p></li>
 <li><p>Adaptation property is preserved even if two genetically identical bateria have various non-robust properties in the network (such as adaptation time, steady-state tumbling frequency).</p></li>
 </ul>
@@ -635,7 +676,7 @@ finish notes for paper 8 robustness
 <li><p>with activity-dependent kinetics, the adaptation properties is insensitive to the values of system parameters (such as enzyme concentrations).</p></li>
 <li><p>but the steady-state activity depends on the enzyme concentration</p></li>
 </ul>
-<br> <br>
+<br>
 <p>
 <button type="button" class="btn btn-default btn-workflowr btn-workflowr-sessioninfo" data-toggle="collapse" data-target="#workflowr-sessioninfo" style="display: block;">
 <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Session information
@@ -643,13 +684,13 @@ finish notes for paper 8 robustness
 </p>
 <div id="workflowr-sessioninfo" class="collapse">
 <pre class="r"><code>sessionInfo()</code></pre>
-<pre><code>R version 3.5.3 (2019-03-11)
+<pre><code>R version 3.6.0 (2019-04-26)
 Platform: x86_64-apple-darwin15.6.0 (64-bit)
-Running under: macOS Sierra 10.12.6
+Running under: macOS Mojave 10.14.5
 
 Matrix products: default
-BLAS: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRblas.0.dylib
-LAPACK: /Library/Frameworks/R.framework/Versions/3.5/Resources/lib/libRlapack.dylib
+BLAS:   /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRblas.0.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/3.6/Resources/lib/libRlapack.dylib
 
 locale:
 [1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
@@ -658,11 +699,11 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 loaded via a namespace (and not attached):
- [1] workflowr_1.2.0 Rcpp_1.0.1      digest_0.6.18   rprojroot_1.3-2
- [5] backports_1.1.3 git2r_0.25.2    magrittr_1.5    evaluate_0.13  
- [9] stringi_1.4.3   fs_1.2.7        whisker_0.3-2   rmarkdown_1.12 
-[13] tools_3.5.3     stringr_1.4.0   glue_1.3.1      xfun_0.5       
-[17] yaml_2.2.0      compiler_3.5.3  htmltools_0.3.6 knitr_1.22     </code></pre>
+ [1] workflowr_1.4.0 Rcpp_1.0.2      digest_0.6.21   rprojroot_1.3-2
+ [5] backports_1.1.4 git2r_0.26.1    magrittr_1.5    evaluate_0.14  
+ [9] stringi_1.4.3   fs_1.3.1        whisker_0.4     rmarkdown_1.15 
+[13] tools_3.6.0     stringr_1.4.0   glue_1.3.1      xfun_0.9       
+[17] yaml_2.2.0      compiler_3.6.0  htmltools_0.3.6 knitr_1.25     </code></pre>
 </div>
 </div>
 
@@ -696,6 +737,49 @@ $(document).ready(function () {
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
