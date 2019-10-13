@@ -42,6 +42,8 @@ This is my website for notes on paper reading.
 
 * Please click on [Robustness in bacterial chemotaxis](robustness2.html) to see notes.
 
+* Please click on [Dynamic instability of microtubule growth (Tim Mitchison & Marc Kirschner)](microtubules.html) to see notes. 
+
 * Please click on [Feature selection and dimension reduction for single cell RNA-seq based on a multinomial model](glm-pca-rnaseq.html) to see notes. 
 
 * Please click on [Using mathematical models to help understand biological pattern formation](turing-model.html) to see notes.
@@ -79,6 +81,12 @@ This is my website for notes on paper reading.
 
 * Please click on [Patient-Specific Effects of Medication Using Latent Force Models with Gaussian Processes (Barbara 5)](barbara5.html) to see notes. 
 
+* Please click on [Variational Autoencoder](variational-autoencoder.html) to see notes. 
+
+
+
+
+
 
 
 
@@ -88,6 +96,10 @@ This is my website for notes on paper reading.
 * Please click on [Abstract Summary on John Storey Paper](abstract-John.html) to see notes.
 
 * Please click on [The optimal discovery procedure for significance analysis of general gene expression studies (John 1)](john1.html) to see notes.
+
+
+
+## Variational autoencoder
 
 
 

@@ -1,0 +1,74 @@
+---
+title: "Dynamic instability of microtubule growth (Tim Mitchison & Marc Kirschner)"
+author: "Kaiqian Zhang"
+date: "10/13/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Definition
+
+- Microtubule: a component of cytoskeleton and can be found throughout the cytoplasm. 
+
+    - can undergo rapid cycles of growth and shrinkage
+    
+    - alpha tubulin has a GTP (just for structure), and beta tublin has a GTP (for binding tubulin dimer, which is just one alpha tubulin + one beta tubulin). And GTP on the beta tublin in the middle of the microtubule will be hydrolysed. Only the GTP on the beta tubulin on the plus end (this is called GTP cap) is not hydrolysed and can keep binding so that microtubule is growing (this is called rescue). But when the concenntration of GTP-bound tubulin decreases, new subunits are added more slowly. And GTP hydrolysis catches up to the end of the microtubule, so lead to the disassembly and shrinkage. 
+    
+    
+    - two types of organizaing centers: centrosomes and basal bodies where cilia and flagella originated. Microtubules are in these centers. So when one microtubule grows, one shrinks. 
+    
+    - function in cell process. e.g: separate chromosomes during mitosis; intercellular transport of organelles; cancer research.
+    
+## Main take-away
+
+- two distinct phases of microtubules exist which are distinguished by the presence or absence of a GTP cap.
+
+- the phase transitions in either direction are rare. 
+  
+    
+    
+## Dilution Experiment
+
+### Procedure
+
+- Instead of using centrosome nucleated microtubules in the previous experiment, they use free microtubules.
+
+- In an assembly-promoting buffer, make Microtubules by spontaneous polymerization. (used as seeds)
+
+- Diluted into a tubulin solution well above the steady-state concentration,  elongate for 4 min. 
+
+- Fixed microtubules were quantitatively sedimented onto grids for electron microscopy.
+
+### Result/Conclusion
+
+- Below the steady-state concentration, microtubules were found to both grow and shrink. 
+    
+    + Above the steady-state concentration, the number of microtubules remained approximately constant. And their length increased from 18.3 to 40.2 $\mu$m in 10 min.
+    
+    + Below the steady-state concentration, the number of microtubules decreased with time. And the mean length still increased from 18.3 to 21.5 in 10 min.
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
