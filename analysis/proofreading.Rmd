@@ -1,0 +1,25 @@
+---
+title: "Kinetic Proofreading (J. J. Hapefield)"
+author: "Kaiqian Zhang"
+date: "10/14/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Definition
+
+- kinetic proofreading: a mechanism for error correction in biochemical reactions
+
+    - detailed definition: Kinetic proofreading is a specificity mechanism that achieves high fidelity beyond the level that can be achieved by the free-energy difference between correct and incorrect interactions, through the presence of (unidirectional) energy-using intermediate steps at each of which the reaction can be aborted. 
+
+    - allows enzymes to discriminate between two possible reaction pathways leading to correct or incorrect products with an accuracy higher than what one would predict based on the difference in the activation energy between these two pathways.
+
+    - Extra energy consuming step: can provide specificity
+
+    - tRNA has the second chance to be read.
+
+
+- Hopfield predicted on the basis of this theory that there is a multistage ratchet in the ribosome which tests the match several times before incorporating the next amino acid into the protein.
